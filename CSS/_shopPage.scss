@@ -1,0 +1,150 @@
+@mixin imgContainer {
+    width: 100%;
+    height: 95%;
+    background-size: cover;
+    margin-bottom: 5px;
+    background-position: center;
+}
+
+
+.shop-container {
+    display: flex;
+    flex-direction: column;
+
+    .collection-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+
+        .collection-title-container {
+            font-size: 28px;
+            margin-bottom: 25px;
+            cursor: pointer;
+        }
+
+        .collections-img-container {
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+
+            .item-container {
+                width: 22vw;
+                display: flex;
+                flex-direction: column;
+                height: 350px;
+                -webkit-box-align: center;
+                align-items: center;
+                position: relative;
+
+                #item-img1 {
+                    background-image: url('../assets/mens/mens1.png');
+                    @include imgContainer;
+                }
+
+                #item-img2 {
+                    background-image: url('../assets/mens/mens2.png');
+                    @include imgContainer;
+                }
+
+                #item-img3 {
+                    background-image: url('../assets/mens/mens3.png');
+                    @include imgContainer;
+                }
+
+                #item-img4 {
+                    background-image: url('../assets/mens/mens4.png');
+                    @include imgContainer;
+                }
+
+                #item-img5 {
+                    background-image: url('../assets/womens/womens1.png');
+                    @include imgContainer;
+                }
+
+                #item-img6 {
+                    background-image: url('../assets/womens/womens2.png');
+                    @include imgContainer;
+                }
+
+                #item-img7 {
+                    background-image: url('../assets/womens/womens3.png');
+                    @include imgContainer;
+                }
+
+                #item-img8 {
+                    background-image: url('../assets/womens/womens4.png');
+                    @include imgContainer;
+                }
+
+                #item-img9 {
+                    background-image: url('../assets/sneakers/sneakers1.png');
+                    @include imgContainer;
+                }
+
+                #item-img10 {
+                    background-image: url('../assets/sneakers/sneakers2.png');
+                    @include imgContainer;
+                }
+
+                #item-img11 {
+                    background-image: url('../assets/sneakers/sneakers3.png');
+                    @include imgContainer;
+                }
+
+                #item-img12 {
+                    background-image: url('../assets/sneakers/sneakers4.png');
+                    @include imgContainer;
+                }
+
+                #item-img13 {
+                    background-image: url('../assets/jackets/jacket1.png');
+                    @include imgContainer;
+                }
+
+                #item-img14 {
+                    background-image: url('../assets/jackets/jacket2.png');
+                    @include imgContainer;
+                }
+
+                #item-img15 {
+                    background-image: url('../assets/jackets/jacket3.png');
+                    @include imgContainer;
+                }
+
+                #item-img16 {
+                    background-image: url('../assets/jackets/jacket4.png');
+                    @include imgContainer;
+                }
+
+                #item-img17 {
+                    background-image: url('../assets/hats/hat1.png');
+                    @include imgContainer;
+                }
+
+                #item-img18 {
+                    background-image: url('../assets/hats/hat2.png');
+                    @include imgContainer;
+                }
+
+                #item-img19 {
+                    background-image: url('../assets/hats/hat3.png');
+                    @include imgContainer;
+                }
+
+                #item-img20 {
+                    background-image: url('../assets/hats/hat4.png');
+                    @include imgContainer;
+                }
+
+                .title-container {
+                    width: 100%;
+                    height: 5%;
+                    display: flex;
+                    -webkit-box-pack: justify;
+                    justify-content: space-between;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

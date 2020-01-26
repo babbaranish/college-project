@@ -1,0 +1,112 @@
+@mixin menuImages {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.menu-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .menu-item {
+        min-width: 30%;
+        height: 240px;
+        flex: 1 1 auto;
+
+
+        justify-content: center;
+        border: 1px solid black;
+        margin: 0 7.5px 15px;
+        overflow: hidden;
+
+        &:hover {
+            cursor: pointer;
+
+            & .background-image {
+                transform: scale(1.1);
+                transition: transform 3s ease-in;
+            }
+
+            & .content {
+                opacity: 0.9;
+            }
+        }
+
+        &.large {
+            height: 380px;
+        }
+
+        &:first-child {
+            margin-right: 7.5px;
+        }
+
+        &:last-child {
+            margin-left: 7.5px;
+        }
+
+        #hats {
+            background-image: url('../assets/hats.png');
+            @include menuImages;
+        }
+
+        #jackets {
+            background-image: url('../assets/jackets.png');
+            @include menuImages;
+        }
+
+        #sneakers {
+            background-image: url('../assets/sneakers.png');
+            @include menuImages;
+        }
+
+        #womens {
+            background-image: url('../assets/womens.png');
+            @include menuImages;
+            height: 380px;
+        }
+
+        #men {
+            background-image: url('../assets/men.png');
+            @include menuImages;
+            height: 380px;
+        }
+
+        .content {
+            height: 90px;
+            padding: 0 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            background-color: white;
+            opacity: 0.7;
+            position: absolute;
+
+            .title {
+                font-weight: bold;
+                margin: 0 6px 0;
+                font-size: 22px;
+                color: #4a4a4a;
+            }
+
+            .subtitle {
+                font-weight: lighter;
+                font-size: 16px;
+            }
+        }
+    }
+
+}
