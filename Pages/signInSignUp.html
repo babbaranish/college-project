@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SIGN IN SIGN UP</title>
+    <link rel="stylesheet" href="../CSS/styles.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HATS</title>
-    <link rel="stylesheet" href="../CSS/styles.css">
-</head>
-
-<body>
+  <body>
     <!--NAV-BAR-->
     <nav class="navbar">
-        <a class="logo-container" href="../index.html">
-            <img src="../assets/crown.svg" alt="shop_home icon" />
-        </a>
-        <ul class="links-container">
-            <li class="links">
-                <a href="./shopPage.html">SHOP</a>
-            </li>
-            <li class="links">
-                <a href="#">SIGN IN</a>
-            </li>
-            <li class="cart-icon-container">
-                <img class="cart-icon" src="../assets/cart.svg" alt="cart icon">
-                <span style="position: absolute;font-size: 10px;font-weight: bold;bottom: 7px;left: 10px;;">0</span>
-                </img>
-            </li>
-        </ul>
+      <a class="logo-container" href="../index.html">
+        <img src="../assets/crown.svg" alt="shop_home icon" />
+      </a>
+      <ul class="links-container">
+        <li class="links">
+          <a href="./shopPage.html">SHOP</a>
+        </li>
+        <li class="links">
+          <a href="#">SIGN IN</a>
+        </li>
+        <li class="cart-icon-container">
+          <img class="cart-icon" src="../assets/cart.svg" alt="cart icon" />
+          <span
+            style="position: absolute;font-size: 10px;font-weight: bold;bottom: 7px;left: 10px;;"
+            >0</span
+          >
+        </li>
+      </ul>
     </nav>
-</body>
 
+    <section class="sign-in-sign-up">
+      <div class="sign-in">
+        <h2>I already have an account</h2>
+        <span>Sign in with your email and password</span>
+        <form action="">
+          <div class="input-container">
+            <input id="email" type="email" required />
+            <label class="email">E-mail</label>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
 </html>

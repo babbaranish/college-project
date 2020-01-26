@@ -27,12 +27,11 @@
         .cart-icon-container {
             list-style: none;
             position: relative;
+            cursor: pointer;
 
             .cart-icon {
                 width: 24px;
                 height: 24px;
-
-
             }
         }
     }

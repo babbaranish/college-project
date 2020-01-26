@@ -20,8 +20,17 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    a {
+        min-width: 33.3%;
+    }
+
+    a:nth-child(4),
+    a:nth-child(5) {
+        width: 50%;
+    }
+
     .menu-item {
-        min-width: 30%;
+
         height: 240px;
         flex: 1 1 auto;
 

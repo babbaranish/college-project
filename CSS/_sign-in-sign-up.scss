@@ -1,0 +1,45 @@
+@mixin shrinkLabel {
+  top: -14px;
+  font-size: 12px;
+  color: $main-color;
+}
+
+.sign-in-sign-up {
+  width: 850px;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+
+  .sign-in {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    .input-container {
+      position: relative;
+      margin: 45px;
+      #email {
+        &:focus {
+          outline: none;
+        }
+
+        &:focus ~ .form-input-label {
+          @include shrinkLabel();
+        }
+      }
+      .email {
+        color: grey;
+        font-size: 16px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: all 300ms ease 0s;
+      }
+    }
+
+    input[type="password"] {
+      letter-spacing: 0.3em;
+    }
+  }
+}

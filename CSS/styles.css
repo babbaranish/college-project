@@ -11,8 +11,16 @@
           justify-content: space-between;
 }
 
+.menu-container a {
+  min-width: 33.3%;
+}
+
+.menu-container a:nth-child(4),
+.menu-container a:nth-child(5) {
+  width: 50%;
+}
+
 .menu-container .menu-item {
-  min-width: 30%;
   height: 240px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -261,6 +269,7 @@
 .navbar .links-container .cart-icon-container {
   list-style: none;
   position: relative;
+  cursor: pointer;
 }
 
 .navbar .links-container .cart-icon-container .cart-icon {
@@ -512,8 +521,157 @@
   font-size: 18px;
 }
 
+.mens-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mens-container .mens-img-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.mens-container .mens-img-container .mens-item-container {
+  width: 22vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 350px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  position: relative;
+}
+
+.mens-container .mens-img-container .mens-item-container #item-img1 {
+  background-image: url("../assets/mens/mens1.png");
+  width: 100%;
+  height: 95%;
+  background-size: cover;
+  margin-bottom: 5px;
+  background-position: center;
+}
+
+.mens-container .mens-img-container .mens-item-container #item-img2 {
+  background-image: url("../assets/mens/mens2.png");
+  width: 100%;
+  height: 95%;
+  background-size: cover;
+  margin-bottom: 5px;
+  background-position: center;
+}
+
+.mens-container .mens-img-container .mens-item-container #item-img3 {
+  background-image: url("../assets/mens/mens3.png");
+  width: 100%;
+  height: 95%;
+  background-size: cover;
+  margin-bottom: 5px;
+  background-position: center;
+}
+
+.mens-container .mens-img-container .mens-item-container #item-img4 {
+  background-image: url("../assets/mens/mens4.png");
+  width: 100%;
+  height: 95%;
+  background-size: cover;
+  margin-bottom: 5px;
+  background-position: center;
+}
+
+.mens-container .mens-img-container .mens-item-container #item-img21 {
+  background-image: url("../assets/mens/mens5.png");
+  width: 100%;
+  height: 95%;
+  background-size: cover;
+  margin-bottom: 5px;
+  background-position: center;
+}
+
+.mens-container .mens-img-container .mens-item-container #item-img22 {
+  background-image: url("../assets/mens/mens6.png");
+  width: 100%;
+  height: 95%;
+  background-size: cover;
+  margin-bottom: 5px;
+  background-position: center;
+}
+
+.mens-container .mens-img-container .mens-item-container .title-container {
+  width: 100%;
+  height: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  font-size: 18px;
+}
+
+.sign-in-sign-up {
+  width: 850px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px auto;
+}
+
+.sign-in-sign-up .sign-in {
+  width: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sign-in-sign-up .sign-in .input-container {
+  position: relative;
+  margin: 45px;
+}
+
+.sign-in-sign-up .sign-in .input-container #email {
+  color: grey;
+  font-size: 18px;
+  display: block;
+  width: 100%;
+  border-top-width: initial;
+  border-right-width: initial;
+  border-left-width: initial;
+  border-top-color: initial;
+  border-right-color: initial;
+  border-left-color: initial;
+  background: none white;
+  padding: 10px 10px 10px 5px;
+  border-style: none none solid;
+  -o-border-image: initial;
+     border-image: initial;
+  border-radius: 0px;
+  border-bottom: 1px solid grey;
+  margin: 25px 0px;
+}
+
 body {
-  font-family: 'Open Sans Condensed' !important;
+  font-family: "Open Sans Condensed" !important;
   padding: 20px 40px;
 }
 
