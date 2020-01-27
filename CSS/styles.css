@@ -646,33 +646,281 @@
 
 .sign-in-sign-up .sign-in .input-container {
   position: relative;
-  margin: 45px;
+  margin: 45px 0;
 }
 
 .sign-in-sign-up .sign-in .input-container #email {
+  background: none;
+  background-color: white;
   color: grey;
   font-size: 18px;
+  padding: 10px 10px 10px 5px;
   display: block;
   width: 100%;
-  border-top-width: initial;
-  border-right-width: initial;
-  border-left-width: initial;
-  border-top-color: initial;
-  border-right-color: initial;
-  border-left-color: initial;
-  background: none white;
-  padding: 10px 10px 10px 5px;
-  border-style: none none solid;
-  -o-border-image: initial;
-     border-image: initial;
-  border-radius: 0px;
+  border: none;
+  border-radius: 0;
   border-bottom: 1px solid grey;
-  margin: 25px 0px;
+  margin: 25px 0;
+}
+
+.sign-in-sign-up .sign-in .input-container #email:focus {
+  outline: none;
+  border-bottom: 2px solid grey;
+}
+
+.sign-in-sign-up .sign-in .input-container #password {
+  background: none;
+  background-color: white;
+  color: grey;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid grey;
+  margin: 25px 0;
+}
+
+.sign-in-sign-up .sign-in .input-container #password:focus {
+  border-bottom: 2px solid grey;
+  outline: none;
+}
+
+.sign-in-sign-up .sign-in .input-container .email-label {
+  color: grey;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  -webkit-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
+}
+
+.sign-in-sign-up .sign-in .input-container .password-label {
+  color: grey;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  -webkit-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
+}
+
+.sign-in-sign-up .sign-in .input-container .shrink1 {
+  top: -14px;
+  font-size: 12px;
+  color: black;
+}
+
+.sign-in-sign-up .sign-in .button-container .sign-in-button {
+  min-width: 165px;
+  width: auto;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed';
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+}
+
+.sign-in-sign-up .sign-in .button-container .sign-in-button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.sign-in-sign-up .sign-in .button-container .sign-in-button:active {
+  outline: none;
+}
+
+.sign-in-sign-up .sign-up {
+  width: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sign-in-sign-up .sign-up .input-container {
+  position: relative;
+  margin: 45px 0;
+}
+
+.sign-in-sign-up .sign-up .input-container #name {
+  background: none;
+  background-color: white;
+  color: grey;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid grey;
+  margin: 25px 0;
+}
+
+.sign-in-sign-up .sign-up .input-container #name:focus {
+  border-bottom: 2px solid grey;
+  outline: none;
+}
+
+.sign-in-sign-up .sign-up .input-container #sign-up-email {
+  background: none;
+  background-color: white;
+  color: grey;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid grey;
+  margin: 25px 0;
+}
+
+.sign-in-sign-up .sign-up .input-container #sign-up-email:focus {
+  outline: none;
+  border-bottom: 2px solid grey;
+}
+
+.sign-in-sign-up .sign-up .input-container #sign-up-password {
+  background: none;
+  background-color: white;
+  color: grey;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid grey;
+  margin: 25px 0;
+}
+
+.sign-in-sign-up .sign-up .input-container #sign-up-password:focus {
+  border-bottom: 2px solid grey;
+  outline: none;
+}
+
+.sign-in-sign-up .sign-up .input-container #conf-password {
+  background: none;
+  background-color: white;
+  color: grey;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid grey;
+  margin: 25px 0;
+}
+
+.sign-in-sign-up .sign-up .input-container #conf-password:focus {
+  border-bottom: 2px solid grey;
+  outline: none;
+}
+
+.sign-in-sign-up .sign-up .input-container .name-label {
+  color: grey;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  -webkit-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
+}
+
+.sign-in-sign-up .sign-up .input-container .sign-up-email-label {
+  color: grey;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  -webkit-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
+}
+
+.sign-in-sign-up .sign-up .input-container .sign-up-password-label {
+  color: grey;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  -webkit-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
+}
+
+.sign-in-sign-up .sign-up .input-container .conf-password-label {
+  color: grey;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  -webkit-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
+}
+
+.sign-in-sign-up .sign-up .input-container .shrink1 {
+  top: -14px;
+  font-size: 12px;
+  color: black;
+}
+
+.sign-in-sign-up .sign-up .button-container .sign-in-button {
+  min-width: 165px;
+  width: auto;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed';
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+}
+
+.sign-in-sign-up .sign-up .button-container .sign-in-button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.sign-in-sign-up .sign-up .button-container .sign-in-button:active {
+  outline: none;
 }
 
 body {
   font-family: "Open Sans Condensed" !important;
   padding: 20px 40px;
+  margin: 0;
 }
 
 @media all and (max-width: 800px) and (min-width: 300px) {

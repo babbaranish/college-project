@@ -1,7 +1,56 @@
-@mixin shrinkLabel {
-  top: -14px;
-  font-size: 12px;
-  color: $main-color;
+$sub-color: grey;
+$main-color: black;
+
+@mixin labelProps {
+  color: $sub-color;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: all 300ms ease 0s;
+}
+
+@mixin formInput {
+  background: none;
+  background-color: white;
+  color: $sub-color;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $sub-color;
+  margin: 25px 0;
+}
+
+@mixin CustomButton {
+  min-width: 165px;
+  width: auto;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed';
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+
+  &:active {
+    outline: none;
+  }
 }
 
 .sign-in-sign-up {
@@ -10,36 +59,133 @@
   justify-content: space-between;
   margin: 30px auto;
 
+  //SIGN IN SCSS
   .sign-in {
     width: 380px;
     display: flex;
     flex-direction: column;
+
     .input-container {
       position: relative;
-      margin: 45px;
+      margin: 45px 0;
+
       #email {
+        @include formInput();
+
         &:focus {
           outline: none;
-        }
-
-        &:focus ~ .form-input-label {
-          @include shrinkLabel();
+          border-bottom: 2px solid $sub-color;
         }
       }
-      .email {
-        color: grey;
-        font-size: 16px;
-        font-weight: normal;
-        position: absolute;
-        pointer-events: none;
-        left: 5px;
-        top: 10px;
-        transition: all 300ms ease 0s;
+
+      #password {
+        @include formInput();
+
+        &:focus {
+          border-bottom: 2px solid $sub-color;
+          outline: none;
+        }
+      }
+
+      .email-label {
+        @include labelProps();
+      }
+
+      .password-label {
+        @include labelProps();
+      }
+
+      .shrink1 {
+        top: -14px;
+        font-size: 12px;
+        color: $main-color;
       }
     }
 
-    input[type="password"] {
-      letter-spacing: 0.3em;
+    .button-container {
+
+      .sign-in-button {
+        @include CustomButton();
+      }
+    }
+  }
+
+  //SIGN UP SCSS
+  .sign-up {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+
+    .input-container {
+      position: relative;
+      margin: 45px 0;
+
+      #name {
+        @include formInput();
+
+        &:focus {
+          border-bottom: 2px solid $sub-color;
+          outline: none;
+        }
+      }
+
+      #sign-up-email {
+        @include formInput();
+
+        &:focus {
+          outline: none;
+          border-bottom: 2px solid $sub-color;
+        }
+      }
+
+      #sign-up-password {
+        @include formInput();
+
+        &:focus {
+          border-bottom: 2px solid $sub-color;
+          outline: none;
+        }
+      }
+
+      #conf-password {
+        @include formInput();
+
+        &:focus {
+          border-bottom: 2px solid $sub-color;
+          outline: none;
+        }
+      }
+
+
+      .name-label {
+        @include labelProps();
+      }
+
+      .sign-up-email-label {
+        @include labelProps();
+      }
+
+      .sign-up-password-label {
+        @include labelProps();
+      }
+
+      .conf-password-label {
+        @include labelProps();
+      }
+
+      .shrink1 {
+        top: -14px;
+        font-size: 12px;
+        color: $main-color;
+      }
+    }
+
+    .button-container {
+
+
+      .sign-in-button {
+        @include CustomButton();
+      }
     }
   }
 }
