@@ -26,7 +26,7 @@ $main-color: black;
   margin: 25px 0;
 }
 
-@mixin CustomButton {
+@mixin CustomButton1 {
   min-width: 165px;
   width: auto;
   height: 50px;
@@ -105,7 +105,7 @@ $main-color: black;
     .button-container {
 
       .sign-in-button {
-        @include CustomButton();
+        @include CustomButton1();
       }
     }
   }
@@ -184,7 +184,7 @@ $main-color: black;
 
 
       .sign-in-button {
-        @include CustomButton();
+        @include CustomButton1();
       }
     }
   }

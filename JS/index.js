@@ -12,7 +12,7 @@ const signUpPasswordLabel = document.querySelector(".sign-up-password-label");
 const confPassword = document.querySelector("#conf-password");
 const confPasswordLabel = document.querySelector(".conf-password-label");
 
-//check if length of password is greater or equal 0
+// check if length of password is greater or equal 0
 // if length is greater than 1 than add shrink class
 // if length is equals to 0 then remove the shrink class hehe
 const checkPass = passInput => {

@@ -4,8 +4,39 @@
     background-size: cover;
     margin-bottom: 5px;
     background-position: center;
+
+    &:hover {
+        opacity: .7;
+
+    }
 }
 
+@mixin CustomButton2 {
+    width: 80%;
+    opacity: 0.8;
+    position: absolute;
+    top: 255px;
+    height: 50px;
+    letter-spacing: 0.5px;
+    line-height: 50px;
+    font-size: 15px;
+    font-family: "Open Sans Condensed";
+    font-weight: bolder;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    padding: 0px 35px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+
+    &:hover {
+        background-color: black;
+        color: white;
+    }
+}
 
 .shop-container {
     display: flex;
@@ -24,7 +55,6 @@
 
         .collections-img-container {
             display: flex;
-            -webkit-box-pack: justify;
             justify-content: space-between;
 
             .item-container {
@@ -32,9 +62,21 @@
                 display: flex;
                 flex-direction: column;
                 height: 350px;
-                -webkit-box-align: center;
                 align-items: center;
                 position: relative;
+
+                &:hover {
+                    .custom-btn {
+                        display: flex;
+                        cursor: pointer;
+                    }
+
+                }
+
+                .custom-btn {
+                    @include CustomButton2;
+                }
+
 
                 #item-img1 {
                     background-image: url('../assets/mens/mens1.png');

@@ -1,14 +1,14 @@
-.mens-container {
+.womens-container {
     display: flex;
     flex-direction: column;
 
-    .mens-img-container {
+    .womens-img-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 10px;
         margin-bottom: 10px;
 
-        .mens-item-container {
+        .womens-item-container {
             width: 22vw;
             display: flex;
             flex-direction: column;
@@ -30,35 +30,41 @@
                 @include CustomButton2;
             }
 
-            #item-img1 {
-                background-image: url('../assets/mens/mens1.png');
+            #item-img5 {
+                background-image: url('../assets/womens/womens1.png');
                 @include imgContainer;
             }
 
-            #item-img2 {
-                background-image: url('../assets/mens/mens2.png');
+            #item-img6 {
+                background-image: url('../assets/womens/womens2.png');
                 @include imgContainer;
             }
 
-            #item-img3 {
-                background-image: url('../assets/mens/mens3.png');
+            #item-img7 {
+                background-image: url('../assets/womens/womens3.png');
                 @include imgContainer;
             }
 
-            #item-img4 {
-                background-image: url('../assets/mens/mens4.png');
+            #item-img8 {
+                background-image: url('../assets/womens/womens4.png');
                 @include imgContainer;
             }
 
-            #item-img21 {
-                background-image: url('../assets/mens/mens5.png');
+            #item-img23 {
+                background-image: url('../assets/womens/womens5.png');
                 @include imgContainer;
             }
 
-            #item-img22 {
-                background-image: url('../assets/mens/mens6.png');
+            #item-img24 {
+                background-image: url('../assets/womens/women6.png');
                 @include imgContainer;
             }
+
+            #item-img25 {
+                background-image: url('../assets/womens/women7.png');
+                @include imgContainer;
+            }
+
 
             .title-container {
                 width: 100%;
