@@ -11,7 +11,54 @@ const signUpPassword = document.querySelector("#sign-up-password");
 const signUpPasswordLabel = document.querySelector(".sign-up-password-label");
 const confPassword = document.querySelector("#conf-password");
 const confPasswordLabel = document.querySelector(".conf-password-label");
+const cartIcon = document.getElementsByClassName("cart-icon-container");
+const cartDrop = document.getElementsByClassName("cart-dropdown");
 
+const addToCartBtn = document.getElementsByClassName("custom-btn");
+for (let i = 0; i < addToCartBtn.length; i++) {
+  let button = addToCartBtn[i];
+  button.addEventListener("click", addToCartClicked);
+}
+
+function addToCartClicked(event) {
+  const button = event.target;
+  const shopItem = button.parentElement;
+  const title = shopItem.getElementsByClassName("title-name")[0].innerText;
+  const price = shopItem.getElementsByClassName("price")[0].innerText;
+  const imageSrc = shopItem.childNodes[1];
+  console.log(title, price);
+  addItemToCart(title, price, imageSrc);
+}
+// ** ADD TO CART FUNCTION HEHE
+function addItemToCart(title, price, imageSrc) {
+  const cartRow = document.createElement("div");
+
+  const cartItems = document.getElementsByClassName("cart-items")[0];
+  var cartItemNames = cartItems.getElementsByClassName("title-name");
+  for (var i = 0; i < cartItemNames.length; i++) {
+    if (cartItemNames[i].innerText == title) {
+      alert("This item is already added to the cart");
+      return;
+    }
+  }
+  //TODO convert imageSrc [HTMLObject] into string so that it can be placed as a div with current image.
+  const cartRowContent = `
+    <div class="item">  
+    ${imageSrc}
+      <div class="title-container">
+          <span class="title-name">${title}</span>
+          <span class="price">${price}</span>
+      </div>
+    </div>
+  `;
+  cartItems.innerHTML = cartRowContent;
+  cartItems.appendChild(cartRow);
+}
+
+//toggle cart event listener
+cartIcon[0].addEventListener("click", function() {
+  cartDrop[0].classList.toggle("visible");
+});
 // check if length of password is greater or equal 0
 // if length is greater than 1 than add shrink class
 // if length is equals to 0 then remove the shrink class hehe
