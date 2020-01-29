@@ -32,7 +32,7 @@ function addToCartClicked(event) {
 // ** ADD TO CART FUNCTION HEHE
 function addItemToCart(title, price, imageSrc) {
   const cartRow = document.createElement("div");
-
+  console.log(imageSrc);
   const cartItems = document.getElementsByClassName("cart-items")[0];
   var cartItemNames = cartItems.getElementsByClassName("title-name");
   for (var i = 0; i < cartItemNames.length; i++) {
