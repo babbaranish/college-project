@@ -26,39 +26,22 @@
 
             }
 
+            .img {
+                width: 100%;
+                height: 93%;
+                margin-bottom: 5px;
+
+                &:hover {
+                    opacity: .7;
+
+                }
+            }
+
             .custom-btn {
                 @include CustomButton2;
             }
 
-            #item-img1 {
-                background-image: url('../assets/mens/mens1.png');
-                @include imgContainer;
-            }
 
-            #item-img2 {
-                background-image: url('../assets/mens/mens2.png');
-                @include imgContainer;
-            }
-
-            #item-img3 {
-                background-image: url('../assets/mens/mens3.png');
-                @include imgContainer;
-            }
-
-            #item-img4 {
-                background-image: url('../assets/mens/mens4.png');
-                @include imgContainer;
-            }
-
-            #item-img21 {
-                background-image: url('../assets/mens/mens5.png');
-                @include imgContainer;
-            }
-
-            #item-img22 {
-                background-image: url('../assets/mens/mens6.png');
-                @include imgContainer;
-            }
 
             .title-container {
                 width: 100%;

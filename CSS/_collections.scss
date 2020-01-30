@@ -30,114 +30,15 @@
                 @include CustomButton2;
             }
 
-            #item-img17 {
-                background-image: url('../assets/hats/hat1.png');
-                @include imgContainer;
-            }
+            .img {
+                width: 100%;
+                height: 93%;
+                margin-bottom: 5px;
 
-            #item-img18 {
-                background-image: url('../assets/hats/hat2.png');
-                @include imgContainer;
-            }
+                &:hover {
+                    opacity: .7;
 
-            #item-img19 {
-                background-image: url('../assets/hats/hat3.png');
-                @include imgContainer;
-            }
-
-            #item-img20 {
-                background-image: url('../assets/hats/hat4.png');
-                @include imgContainer;
-            }
-
-            #item-img26 {
-                background-image: url('../assets/hats/hat5.png');
-                @include imgContainer;
-            }
-
-            #item-img27 {
-                background-image: url('../assets/hats/hat6.png');
-                @include imgContainer;
-            }
-
-            #item-img28 {
-                background-image: url('../assets/hats/hat7.png');
-                @include imgContainer;
-            }
-
-            #item-img29 {
-                background-image: url('../assets/hats/hat8.png');
-                @include imgContainer;
-            }
-
-            #item-img30 {
-                background-image: url('../assets/hats/hat9.png');
-                @include imgContainer;
-            }
-
-            #item-img9 {
-                background-image: url('../assets/sneakers/sneakers1.png');
-                @include imgContainer;
-            }
-
-            #item-img10 {
-                background-image: url('../assets/sneakers/sneakers2.png');
-                @include imgContainer;
-            }
-
-            #item-img11 {
-                background-image: url('../assets/sneakers/sneakers3.png');
-                @include imgContainer;
-            }
-
-            #item-img12 {
-                background-image: url('../assets/sneakers/sneakers4.png');
-                @include imgContainer;
-            }
-
-            #item-img31 {
-                background-image: url('../assets/sneakers/sneakers5.png');
-                @include imgContainer;
-            }
-
-            #item-img32 {
-                background-image: url('../assets/sneakers/sneakers6.png');
-                @include imgContainer;
-            }
-
-            #item-img33 {
-                background-image: url('../assets/sneakers/sneakers7.png');
-                @include imgContainer;
-            }
-
-            #item-img34 {
-                background-image: url('../assets/sneakers/sneakers8.png');
-                @include imgContainer;
-            }
-
-            #item-img13 {
-                background-image: url('../assets/jackets/jacket1.png');
-                @include imgContainer;
-            }
-
-            #item-img14 {
-                background-image: url('../assets/jackets/jacket2.png');
-                @include imgContainer;
-            }
-
-            #item-img15 {
-                background-image: url('../assets/jackets/jacket3.png');
-                @include imgContainer;
-            }
-
-            #item-img16 {
-                background-image: url('../assets/jackets/jacket4.png');
-                @include imgContainer;
-            }
-
-            #item-img35 {
-                background-image: url('../assets/jackets/jackets5.png');
-                @include imgContainer;
+                }
             }
 
             .title-container {

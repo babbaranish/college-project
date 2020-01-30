@@ -13,8 +13,8 @@ const confPassword = document.querySelector("#conf-password");
 const confPasswordLabel = document.querySelector(".conf-password-label");
 const cartIcon = document.getElementsByClassName("cart-icon-container");
 const cartDrop = document.getElementsByClassName("cart-dropdown");
-
 const addToCartBtn = document.getElementsByClassName("custom-btn");
+
 for (let i = 0; i < addToCartBtn.length; i++) {
   let button = addToCartBtn[i];
   button.addEventListener("click", addToCartClicked);
@@ -25,11 +25,13 @@ function addToCartClicked(event) {
   const shopItem = button.parentElement;
   const title = shopItem.getElementsByClassName("title-name")[0].innerText;
   const price = shopItem.getElementsByClassName("price")[0].innerText;
-  const imageSrc = shopItem.childNodes[1];
+  const imageSrc = shopItem.getElementsByClassName("img")[0].src;
+
   console.log(title, price);
+  console.log(imageSrc);
   addItemToCart(title, price, imageSrc);
 }
-// ** ADD TO CART FUNCTION HEHE
+// ADD TO CART FUNCTION HEHE
 function addItemToCart(title, price, imageSrc) {
   const cartRow = document.createElement("div");
   console.log(imageSrc);
@@ -41,18 +43,17 @@ function addItemToCart(title, price, imageSrc) {
       return;
     }
   }
-  //TODO convert imageSrc [HTMLObject] into string so that it can be placed as a div with current image.
   const cartRowContent = `
     <div class="item">  
-    ${imageSrc}
+    <img class="img" src="${imageSrc}" alt="">
       <div class="title-container">
-          <span class="title-name">${title}</span>
+          <span class="title-name">${title}</span><br>
           <span class="price">${price}</span>
       </div>
     </div>
   `;
   cartItems.innerHTML = cartRowContent;
-  cartItems.appendChild(cartRow);
+  cartItems.append("hello");
 }
 
 //toggle cart event listener
