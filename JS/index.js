@@ -53,7 +53,7 @@ function addItemToCart(title, price, imageSrc) {
     </div>
   `;
   cartItems.innerHTML = cartRowContent;
-  cartItems.append("hello");
+  cartItems.append(cartRow);
 }
 
 //toggle cart event listener
