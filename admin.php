@@ -12,15 +12,15 @@
     <center>
 
         <h1>ADD PRODUCT TO THE SHOP</h1>
-        <form action='./Pages/submit.php' method="post">
+        <form action='./Pages/submit.php' method="post" enctype="multipart/form-data">
             <label style="margin-right:10px;font-size:20px;margin-left:60px;">IMAGE : </label>
-            <input type="file" name="image"></input><br><br>
+            <input type="file" name="image" required></input><br><br>
             <label style="margin-right:10px;font-size:20px;">NAME : </label>
-            <input type="text" name="name"></input><br><br>
+            <input type="text" name="name" required></input><br><br>
             <label style="margin-right:10px;font-size:20px;">PRICE : </label>
-            <input type="text" name="price"></input><br><br>
+            <input type="text" name="price" required></input><br><br>
             <label style="margin-right:10px;font-size:20px;">CATEGORY : </label>
-            <input type="text" name="category"></input><br><br>
+            <input type="text" name="category" required></input><br><br>
             <input
                 style="height: 50px;letter-spacing:0.5px;line-height: 50px;padding: 0 35px 0 35px;font-size: 15px;background-color: black;color: white;font-family: 'Open Sans Condensed';border:none;cursor:pointer"
                 type="submit" name="submit">

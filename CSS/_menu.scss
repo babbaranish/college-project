@@ -65,32 +65,6 @@
             margin-left: 7.5px;
         }
 
-        #hats {
-            background-image: url('../assets/hats.png');
-            @include menuImages;
-        }
-
-        #jackets {
-            background-image: url('../assets/jackets.png');
-            @include menuImages;
-        }
-
-        #sneakers {
-            background-image: url('../assets/sneakers.png');
-            @include menuImages;
-        }
-
-        #womens {
-            background-image: url('../assets/womens.png');
-            @include menuImages;
-            height: 380px;
-        }
-
-        #men {
-            background-image: url('../assets/men.png');
-            @include menuImages;
-            height: 380px;
-        }
 
         .content {
             height: 90px;

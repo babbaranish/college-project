@@ -41,40 +41,6 @@
                 @include CustomButton2;
             }
 
-            #item-img5 {
-                background-image: url('../assets/womens/womens1.png');
-                @include imgContainer;
-            }
-
-            #item-img6 {
-                background-image: url('../assets/womens/womens2.png');
-                @include imgContainer;
-            }
-
-            #item-img7 {
-                background-image: url('../assets/womens/womens3.png');
-                @include imgContainer;
-            }
-
-            #item-img8 {
-                background-image: url('../assets/womens/womens4.png');
-                @include imgContainer;
-            }
-
-            #item-img23 {
-                background-image: url('../assets/womens/womens5.png');
-                @include imgContainer;
-            }
-
-            #item-img24 {
-                background-image: url('../assets/womens/women6.png');
-                @include imgContainer;
-            }
-
-            #item-img25 {
-                background-image: url('../assets/womens/women7.png');
-                @include imgContainer;
-            }
 
 
             .title-container {
