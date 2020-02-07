@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./CSS/styles.css" />
     <title>Project Shop</title>
 </head>
@@ -17,7 +13,7 @@
         </a>
         <ul class="links-container">
             <li class="links">
-                <a href="./Pages/shopPage.html">SHOP</a>
+                <a href="./Pages/shopPage.php">SHOP</a>
             </li>
             <li class="links"><a href="./Pages/signInSignUp.html">SIGN IN</a></li>
             <li class="cart-icon-container">
