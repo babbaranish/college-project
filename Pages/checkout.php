@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="icon" href="../assets/icon.ico">
     <link rel="stylesheet" href="../CSS/styles.css" />
-    <title>Project Shop</title>
+    <title>Check out</title>
 </head>
 
 <body>
     <!--NAV-BAR-->
     <nav class="navbar">
-        <a class="logo-container" href="index.php">
+        <a class="logo-container" href="../index.php">
             <img src="../assets/crown.svg" alt="shop_home icon" />
         </a>
         <ul class="links-container">

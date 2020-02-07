@@ -20,6 +20,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
 
 <head>
     <title>Shop Collections</title>
+    <link rel="icon" href="../assets/icon.ico">
     <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 
@@ -34,7 +35,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
                 <a href="#">SHOP</a>
             </li>
             <li class="links">
-                <a href="./signInSignUp.html">SIGN IN</a>
+                <a href="./signInSignUp.php">SIGN IN</a>
             </li>
             <li class="cart-icon-container">
                 <img class="cart-icon" src="../assets/cart.svg" alt="cart icon">
@@ -44,7 +45,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
         </ul>
         <div class="cart-dropdown">
             <div class="cart-items"></div>
-            <a href='./checkout.html'>
+            <a href='./checkout.php'>
                 <button class="cart-button">GO TO CHECKOUT</button>
             </a>
         </div>
@@ -52,7 +53,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
     <!--MENS SECTION-->
     <section class="mens-container">
         <h1 class="shop-title-container">
-            <a href='./mens.html'>MENS</a>
+            <a href='./mens.php'>MENS</a>
         </h1>
         <div class="mens-img-container">
             <?php
@@ -74,7 +75,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
     <!--WOMENS SECTION-->
     <section class="womens-container">
         <h1 class="shop-title-container">
-            <a href='./womens.html'>WOMENS</a>
+            <a href='./womens.php'>WOMENS</a>
         </h1>
         <div class="womens-img-container">
             <?php
@@ -95,7 +96,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
     <!--SNEAKERS SECTION-->
     <section class="item-container">
         <h1 class="shop-title-container">
-            <a href='./sneakers.html'>SNEAKERS</a>
+            <a href='./sneakers.php'>SNEAKERS</a>
         </h1>
         <div class="item-img-container">
             <?php
@@ -116,7 +117,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
     <!--JACKETS SECTION-->
     <section class="item-container">
         <h1 class="shop-title-container">
-            <a href='./jackets.html'>JACKETS</a>
+            <a href='./jackets.php'>JACKETS</a>
         </h1>
         <div class="item-img-container">
             <?php
@@ -137,7 +138,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
     <!--HATS SECTION-->
     <section class="item-container">
         <h1 class="shop-title-container">
-            <a href='./hats.html'>HATS</a>
+            <a href='./hats.php'>HATS</a>
         </h1>
         <div class="item-img-container">
             <?php
