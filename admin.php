@@ -20,7 +20,7 @@
             <li class="links"><a href="./Pages/signInSignUp.php">SIGN IN</a></li>
             <li class="cart-icon-container">
                 <img class="cart-icon" src="./assets/cart.svg" alt="cart icon" />
-                <span style="position: absolute;font-size: 10px;font-weight: bold;bottom: 7px;left: 10px;;">0</span>
+                <span style="position: absolute;font-size: 10px;font-weight: bold;bottom: 7px;left: 10px;">0</span>
             </li>
         </ul>
         <div class="cart-dropdown">
@@ -33,7 +33,7 @@
 
     <center>
         <h1>ADD PRODUCT TO THE SHOP</h1>
-        <form action='./Pages/submit.php' method="post" enctype="multipart/form-data">
+        <form action='./Pages/Config/submit.php' method="post" enctype="multipart/form-data">
             <label style="margin-right:10px;font-size:20px;margin-left:60px;">IMAGE : </label>
             <input type="file" name="image" required></input><br><br>
             <label style="margin-right:10px;font-size:20px;">NAME : </label>

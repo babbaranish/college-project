@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 
 <head>
@@ -16,7 +19,15 @@
             <li class="links">
                 <a href="./Pages/shopPage.php">SHOP</a>
             </li>
-            <li class="links"><a href="./Pages/signInSignUp.php">SIGN IN</a></li>
+            <li class="links">
+                <?php
+                if (isset($_SESSION['user'])) {
+                    echo ' <a href="./Pages/Config/signout.php">SIGN OUT</a>';
+                } else {
+                    echo ' <a href="./Pages/signInSignUp.php">SIGN IN</a>';
+                }
+                ?>
+            </li>
             <li class="cart-icon-container">
                 <img class="cart-icon" src="./assets/cart.svg" alt="cart icon" />
                 <span style="position: absolute;font-size: 10px;font-weight: bold;bottom: 7px;left: 10px;;">0</span>

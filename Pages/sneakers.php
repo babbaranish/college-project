@@ -1,5 +1,6 @@
 <?php
-include_once './db.php';
+include_once './Config/db.php';
+session_start();
 $query = 'SELECT * FROM sneakers';
 $dataFromDB = mysqli_query($db, $query);
 ?>
@@ -23,7 +24,13 @@ $dataFromDB = mysqli_query($db, $query);
                 <a href="./shopPage.php">SHOP</a>
             </li>
             <li class="links">
-                <a href="./signInSignUp.php">SIGN IN</a>
+                <?php
+                if (isset($_SESSION['user'])) {
+                    echo ' <a href="../index.php">SIGN OUT</a>';
+                } else {
+                    echo ' <a href="./Config/signInSignUp.php">SIGN IN</a>';
+                }
+                ?>
             </li>
             <li class="cart-icon-container">
                 <img class="cart-icon" src="../assets/cart.svg" alt="cart icon">

@@ -1,5 +1,6 @@
 <?php
-include_once("./db.php");
+include_once "./Config/db.php";
+session_start();
 //QUERY FOR MENS 
 $queryMens = "SELECT * FROM mens LIMIT 4";
 $dataFromMens = mysqli_query($db, $queryMens);
@@ -35,7 +36,13 @@ $dataFromHats = mysqli_query($db, $queryHats);
                 <a href="#">SHOP</a>
             </li>
             <li class="links">
-                <a href="./signInSignUp.php">SIGN IN</a>
+                <?php
+                if (isset($_SESSION['user'])) {
+                    echo ' <a href="./Config/signout.php">SIGN OUT</a>';
+                } else {
+                    echo ' <a href="./signInSignUp.php">SIGN IN</a>';
+                }
+                ?>
             </li>
             <li class="cart-icon-container">
                 <img class="cart-icon" src="../assets/cart.svg" alt="cart icon">
