@@ -43,17 +43,17 @@ function addItemToCart(title, price, imageSrc) {
       return;
     }
   }
-  const cartRowContent = `
+
+  cartItems.innerHTML += `
     <div class="item">  
     <img class="img" src="${imageSrc}" alt="">
       <div class="title-container">
-          <span class="title-name">${title}</span><br>
-          <span class="price">${price}</span>
+        <span class="title-name">${title}</span><br>
+        <span class="price">${price}</span>
       </div>
     </div>
   `;
-  cartItems.innerHTML = cartRowContent;
-  cartItems.append(cartRow);
+  cartItems.appendChild("beforeend", cartRow);
 }
 
 //toggle cart event listener
