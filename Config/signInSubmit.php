@@ -1,4 +1,7 @@
 <?php
+
+$adminEmail = "admin@gmail.com";
+$adminPass = "admin";
 session_start();
 if (isset($_POST['submit1'])) {
     include_once './db.php';
@@ -8,10 +11,13 @@ if (isset($_POST['submit1'])) {
     $query = "SELECT email,password FROM users WHERE email='$email'";
     $result = mysqli_query($db, $query);
     $userData = mysqli_fetch_assoc($result);
-    if ($userData) {
+    if ($email == $adminEmail && $password == $adminPass) {
+        $_SESSION['admin'] = $adminEmail;
+        header('location:../index.php');
+    } else if ($userData) {
         if (password_verify($password, $userData['password'])) {
             $_SESSION['user'] = $userData['email'];
-            header('location:../../index.php');
+            header('location:../index.php');
         }
     } else {
         header('location:../signInSignUp.php?error=1');

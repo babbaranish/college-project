@@ -9,23 +9,31 @@ $dataFromDB = mysqli_query($db, $query);
 
 <head>
     <title>Hats</title>
-    <link rel="icon" href="../assets/icon.ico">
-    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="icon" href="./assets/icon.ico">
+    <link rel="stylesheet" href="./CSS/styles.css">
 </head>
 
 <body>
     <!--NAV-BAR-->
     <nav class="navbar">
-        <a class="logo-container" href="../index.php">
-            <img src="../assets/crown.svg" alt="shop_home icon" />
+        <a class="logo-container" href="./index.php">
+            <img src="./assets/crown.svg" alt="shop_home icon" />
         </a>
         <ul class="links-container">
+            <?php
+            if (isset($_SESSION['admin'])) {
+                echo '<li class="links">
+                            <a href="./admin.php">ADD PRODUCTS</a>
+                        </li>';
+            }
+            ?>
             <li class="links">
                 <a href="./shopPage.php">SHOP</a>
             </li>
+
             <li class="links">
                 <?php
-                if (isset($_SESSION['user'])) {
+                if (isset($_SESSION['user']) || isset($_SESSION['admin'])) {
                     echo ' <a href="./Config/signout.php">SIGN OUT</a>';
                 } else {
                     echo ' <a href="./signInSignUp.php">SIGN IN</a>';
@@ -33,8 +41,9 @@ $dataFromDB = mysqli_query($db, $query);
                 ?>
             </li>
             <li class="cart-icon-container">
-                <img class="cart-icon" src="../assets/cart.svg" alt="cart icon">
-                <span style="position: absolute;font-size: 10px;font-weight: bold;bottom: 7px;left: 10px;;">0</span>
+                <img class="cart-icon" src="./assets/cart.svg" alt="cart icon">
+                <span id='cart-value'
+                    style="position: absolute;font-size: 10px;font-weight: bold;bottom: 7px;left: 10px;;">0</span>
                 </img>
             </li>
         </ul>
@@ -54,20 +63,20 @@ $dataFromDB = mysqli_query($db, $query);
             <?php
             while ($data = mysqli_fetch_assoc($dataFromDB)) {
                 echo '
-          <div class="item-container">
-          <img class="img" src="data:image/png;base64,' . base64_encode($data['image']) . '" />
-            <div class="title-container">
-              <span class="title-name">' . $data['product'] . '</span>
-              <span class="price">$' . $data['price'] . '</span>
-            </div>
-            <button class="custom-btn">ADD TO CART</button>
-          </div>
-          ';
+                <div class="item-container">
+                <img class="img" src="data:image/png;base64,' . base64_encode($data['image']) . '" />
+                    <div class="title-container">
+                        <span class="title-name">' . $data['product'] . '</span>
+                        <span class="price">$' . $data['price'] . '</span>
+                    </div>
+                    <button class="custom-btn">ADD TO CART</button>
+                </div>
+                ';
             }
             ?>
         </div>
     </div>
-    <script src="../JS/index.js"></script>
+    <script src="./JS/index.js"></script>
 
 </body>
 
