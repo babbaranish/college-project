@@ -2,13 +2,27 @@
     display: flex;
     flex-direction: column;
 
+    .shop-title-container {
+        @media all and (max-width: 800px) and (min-width: 300px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
     .item-img-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 10px;
         margin-bottom: 10px;
 
+        @media all and (max-width: 800px) and (min-width: 300px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-left: 16px;
+            grid-gap: 3px;
+        }
+
         .item-container {
+            margin: auto;
             width: 22vw;
             display: flex;
             flex-direction: column;
@@ -28,6 +42,11 @@
 
             .custom-btn {
                 @include CustomButton2;
+
+                @media all and (max-width: 800px) and (min-width: 300px) {
+                    font-size: 12px;
+                    padding: 0;
+                }
             }
 
             .img {
@@ -48,6 +67,21 @@
                 -webkit-box-pack: justify;
                 justify-content: space-between;
                 font-size: 18px;
+
+
+            }
+
+            @media all and (max-width: 800px) and (min-width: 300px) {
+                margin: auto;
+                width: 40vw;
+                display: flex;
+                flex-direction: column;
+                height: 350px;
+                -webkit-box-align: center;
+                align-items: center;
+                position: relative;
+                margin-bottom: 30px;
+
             }
         }
     }

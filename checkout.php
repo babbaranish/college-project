@@ -9,6 +9,11 @@ session_start();
     <link rel="icon" href="./assets/icon.ico">
     <link rel="stylesheet" href="./CSS/styles.css" />
     <title>Check out</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Ensures optimal rendering on mobile devices. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
+
+
 </head>
 
 <body>
@@ -63,9 +68,41 @@ session_start();
         <div class="total-container">
             Total <span>$0</span>
         </div>
+        <div style="width:50%; margin-left: auto;margin-top:30px; " id="paypal-button-container"></div>
     </div>
 
 
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=Ablhq3zYMRmCW8rPE6HXsiHeHRhdMAOCXzxT5ThxPrbnLZaPDZ33fboc_7nB45UPJ4KQSKSZRR5lxzaF&currency=INR">
+    </script>
+    <script>
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: '0.01'
+                    }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Transaction completed by ' + details.payer.name.given_name);
+                // Call your server to save the transaction
+                return fetch('/paypal-transaction-complete', {
+                    method: 'post',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        orderID: data.orderID
+                    })
+                });
+            });
+        }
+    }).render('#paypal-button-container');
+    </script>
 
     <script src="./JS/index.js"></script>
 </body>

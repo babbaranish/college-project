@@ -2,15 +2,29 @@
     display: flex;
     flex-direction: column;
 
+    .shop-title-container {
+        @media all and (max-width: 800px) and (min-width: 300px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
     .mens-img-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 10px;
         margin-bottom: 10px;
+
+        @media all and (max-width: 800px) and (min-width: 300px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-left: 16px;
+            grid-gap: 3px;
+        }
 
         .mens-item-container {
             width: 22vw;
             display: flex;
+            margin: auto;
             flex-direction: column;
             height: 350px;
             -webkit-box-align: center;
@@ -50,6 +64,19 @@
                 -webkit-box-pack: justify;
                 justify-content: space-between;
                 font-size: 18px;
+            }
+
+            @media all and (max-width: 800px) and (min-width: 300px) {
+                margin: auto;
+                width: 40vw;
+                display: flex;
+                flex-direction: column;
+                height: 350px;
+                -webkit-box-align: center;
+                align-items: center;
+                position: relative;
+                margin-bottom: 30px;
+
             }
         }
     }

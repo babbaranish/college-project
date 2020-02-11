@@ -30,15 +30,17 @@
     }
 
     .menu-item {
-
         height: 240px;
         flex: 1 1 auto;
-
-
         justify-content: center;
         border: 1px solid black;
         margin: 0 7.5px 15px;
         overflow: hidden;
+
+        // @media all and (max-width: 800px) and (min-width: 300px) {
+        //     display: flex;
+        //     flex: 1 1 auto;
+        // }
 
         &:hover {
             cursor: pointer;
@@ -65,31 +67,54 @@
             margin-left: 7.5px;
         }
 
+        #sneakers {
+            background-image: url('../assets/sneakers.png');
+            @include menuImages();
+        }
 
-        .content {
-            height: 90px;
-            padding: 0 25px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid black;
-            background-color: white;
-            opacity: 0.7;
-            position: absolute;
+        #womens {
+            background-image: url('../assets/womens.png');
+            @include menuImages();
+        }
 
-            .title {
-                font-weight: bold;
-                margin: 0 6px 0;
-                font-size: 22px;
-                color: #4a4a4a;
-            }
+        #men {
+            background-image: url('../assets/men.png');
+            @include menuImages();
+        }
 
-            .subtitle {
-                font-weight: lighter;
-                font-size: 16px;
-            }
+        #jackets {
+            background-image: url('../assets/jackets.png');
+            @include menuImages();
+        }
+
+        #hats {
+            background-image: url('../assets/hats.png');
+            @include menuImages();
         }
     }
 
+    .content {
+        height: 90px;
+        padding: 0 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        background-color: white;
+        opacity: 0.7;
+        position: absolute;
+
+        .title {
+            font-weight: bold;
+            margin: 0 6px 0;
+            font-size: 22px;
+            color: #4a4a4a;
+        }
+
+        .subtitle {
+            font-weight: lighter;
+            font-size: 16px;
+        }
+    }
 }
