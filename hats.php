@@ -9,6 +9,7 @@ $dataFromDB = mysqli_query($db, $query);
 
 <head>
     <title>Hats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/icon.ico">
     <link rel="stylesheet" href="./CSS/styles.css">
 </head>
@@ -77,6 +78,7 @@ $dataFromDB = mysqli_query($db, $query);
         </div>
     </div>
     <script src="./JS/index.js"></script>
+    <script src="./JS/storage.js"></script>
 
 </body>
 

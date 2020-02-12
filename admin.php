@@ -7,6 +7,7 @@ if (!isset($_SESSION['admin'])) {
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" href="./assets/icon.ico">
     <link rel="stylesheet" href="./CSS/styles.css" />
@@ -71,6 +72,7 @@ if (!isset($_SESSION['admin'])) {
     </center>
 
 
+    <script src="./JS/storage.js"></script>
 </body>
 
 </html>

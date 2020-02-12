@@ -54,16 +54,27 @@ $main-color: black;
 }
 
 .sign-in-sign-up {
-  width: 850px;
+  width: 800px;
   display: flex;
   justify-content: space-between;
   margin: 30px auto;
+
+  @media all and (max-width: 800px) and (min-width: 300px) {
+    flex-direction: column;
+    width: unset;
+
+  }
+
 
   //SIGN IN SCSS
   .sign-in {
     width: 380px;
     display: flex;
     flex-direction: column;
+
+    @media all and (max-width: 800px) and (min-width: 300px) {
+      width: unset;
+    }
 
     .input-container {
       position: relative;
@@ -115,6 +126,12 @@ $main-color: black;
     width: 380px;
     display: flex;
     flex-direction: column;
+
+    @media all and (max-width: 800px) and (min-width: 300px) {
+
+      width: unset;
+
+    }
 
     .input-container {
       position: relative;

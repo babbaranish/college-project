@@ -4,6 +4,8 @@ session_start();
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/styles.css" />
     <link rel="icon" href="./assets/icon.ico">
     <title>Project Shop</title>
@@ -51,6 +53,8 @@ session_start();
     </nav>
 
     <!--HOMEPAGE MENU-->
+
+
     <div class="menu-container">
         <a href="./hats.php">
             <div class=" menu-item">
@@ -102,8 +106,12 @@ session_start();
                 </div>
             </div>
         </a>
+
     </div>
     <script src="./JS/index.js"></script>
+    <script src="./JS/storage.js">
+
+    </script>
 
 </body>
 

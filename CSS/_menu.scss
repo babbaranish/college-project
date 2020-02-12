@@ -16,12 +16,124 @@
 
 .menu-container {
     width: 100%;
+    flex: 1 1 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
+
+
+
     a {
         min-width: 33.3%;
+
+        .menu-item {
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1 1 auto;
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
+            border-image: initial;
+            margin: 0px 7.5px 15px;
+            overflow: hidden;
+
+            // @media all and (max-width: 480px) and (min-width: 280px) {
+            //     height: 200px;
+            // }
+
+            &:hover {
+                cursor: pointer;
+
+                & .background-image {
+                    transform: scale(1.1);
+                    transition: transform 3s ease-in;
+                }
+
+                & .content {
+                    opacity: 0.9;
+                }
+            }
+
+            &.large {
+                height: 380px;
+
+                // @media all and (max-width: 480px) and (min-width: 280px) {
+                //     flex: 1 1 auto;
+                //     height: 200px;
+                //     width: 100%;
+                // }
+            }
+
+            &:first-child {
+                margin-right: 7.5px;
+            }
+
+            &:last-child {
+                margin-left: 7.5px;
+            }
+
+            #sneakers {
+                background-image: url('../assets/sneakers.png');
+                @include menuImages();
+            }
+
+            #womens {
+                background-image: url('../assets/womens.png');
+                @include menuImages();
+            }
+
+            #men {
+                background-image: url('../assets/men.png');
+                @include menuImages();
+            }
+
+            #jackets {
+                background-image: url('../assets/jackets.png');
+                @include menuImages();
+            }
+
+            #hats {
+                background-image: url('../assets/hats.png');
+                @include menuImages();
+            }
+
+        }
+
+        .content {
+            height: 90px;
+            padding: 0 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            background-color: white;
+            opacity: 0.7;
+            position: absolute;
+
+            @media all and (max-width: 480px) and (min-width: 280px) {
+                padding: 0 10px;
+            }
+
+            .title {
+                font-weight: bold;
+                margin: 0 6px 0;
+                font-size: 22px;
+                color: #4a4a4a;
+
+                @media all and (max-width: 480px) and (min-width: 280px) {
+                    font-size: 20px;
+                }
+            }
+
+            .subtitle {
+                font-weight: lighter;
+                font-size: 16px;
+            }
+        }
     }
 
     a:nth-child(4),
@@ -29,92 +141,5 @@
         width: 50%;
     }
 
-    .menu-item {
-        height: 240px;
-        flex: 1 1 auto;
-        justify-content: center;
-        border: 1px solid black;
-        margin: 0 7.5px 15px;
-        overflow: hidden;
 
-        // @media all and (max-width: 800px) and (min-width: 300px) {
-        //     display: flex;
-        //     flex: 1 1 auto;
-        // }
-
-        &:hover {
-            cursor: pointer;
-
-            & .background-image {
-                transform: scale(1.1);
-                transition: transform 3s ease-in;
-            }
-
-            & .content {
-                opacity: 0.9;
-            }
-        }
-
-        &.large {
-            height: 380px;
-        }
-
-        &:first-child {
-            margin-right: 7.5px;
-        }
-
-        &:last-child {
-            margin-left: 7.5px;
-        }
-
-        #sneakers {
-            background-image: url('../assets/sneakers.png');
-            @include menuImages();
-        }
-
-        #womens {
-            background-image: url('../assets/womens.png');
-            @include menuImages();
-        }
-
-        #men {
-            background-image: url('../assets/men.png');
-            @include menuImages();
-        }
-
-        #jackets {
-            background-image: url('../assets/jackets.png');
-            @include menuImages();
-        }
-
-        #hats {
-            background-image: url('../assets/hats.png');
-            @include menuImages();
-        }
-    }
-
-    .content {
-        height: 90px;
-        padding: 0 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid black;
-        background-color: white;
-        opacity: 0.7;
-        position: absolute;
-
-        .title {
-            font-weight: bold;
-            margin: 0 6px 0;
-            font-size: 22px;
-            color: #4a4a4a;
-        }
-
-        .subtitle {
-            font-weight: lighter;
-            font-size: 16px;
-        }
-    }
 }

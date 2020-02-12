@@ -21,6 +21,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
 
 <head>
     <title>Shop Collections</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/icon.ico">
     <link rel="stylesheet" href="./CSS/styles.css">
 </head>
@@ -171,6 +172,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
             ?>
         </div>
     </section>
+    <script src="./JS/storage.js"></script>
     <script src="./JS/index.js"></script>
 </body>
 

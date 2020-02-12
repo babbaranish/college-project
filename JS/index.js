@@ -18,7 +18,7 @@ function addToCartClicked(event) {
   addItemToCart(title, price, imageSrc);
 }
 // ADD TO CART FUNCTION HEHE
-function addItemToCart(title, price, imageSrc) {
+const addItemToCart = (title, price, imageSrc) => {
   const cartRow = document.createElement("div");
 
   const cartItems = document.getElementsByClassName("cart-items")[0];
@@ -41,15 +41,18 @@ function addItemToCart(title, price, imageSrc) {
   `;
   cartItems.appendChild(cartRow);
   updateCartValue();
-}
+  const cartItems1 = document.getElementsByClassName("cart-items")[0];
+  // alert(cartItems1);
+  localStorage.setItem("cart", cartItems1.innerHTML);
+};
 
 //toggle cart event listener
 cartIcon[0].addEventListener("click", function() {
   cartDrop[0].classList.toggle("visible");
 });
 
-function updateCartValue() {
+const updateCartValue = () => {
   const cartItem = document.getElementsByClassName("cart-items")[0];
-  const cartValue = cartItem.childElementCount / 2; //dividing by 2 coz flexbox added its div to seperate elements hehe ez
+  const cartValue = Math.floor(cartItem.childElementCount / 2); //dividing by 2 coz flexbox added its div to seperate elements hehe ez
   document.querySelector("#cart-value").innerHTML = cartValue;
-}
+};

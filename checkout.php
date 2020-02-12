@@ -59,14 +59,14 @@ session_start();
 
     <div class="checkout-container">
         <div class="checkout-titles">
-            <div class="product">Product</div>
-            <div class="description">Description</div>
-            <div class="quantity">Quantity</div>
-            <div class="price">Price</div>
-            <div class="remove">Remove</div>
+            <div class="product"><span> Product</span></div>
+            <div class="description"><span>Description</span></div>
+            <div class="quantity"><span>Quantity</span></div>
+            <div class="price"><span>Price</span></div>
+            <div class="remove"><span>Remove</span></div>
         </div>
         <div class="total-container">
-            Total <span>$0</span>
+            Total $<span id='total-price'>0</span>
         </div>
         <div style="width:50%; margin-left: auto;margin-top:30px; " id="paypal-button-container"></div>
     </div>
@@ -76,34 +76,21 @@ session_start();
         src="https://www.paypal.com/sdk/js?client-id=Ablhq3zYMRmCW8rPE6HXsiHeHRhdMAOCXzxT5ThxPrbnLZaPDZ33fboc_7nB45UPJ4KQSKSZRR5lxzaF&currency=INR">
     </script>
     <script>
+    const totalPrice = document.getElementById('total-price').innerText;
+    console.log(totalPrice)
     paypal.Buttons({
-        createOrder: function(data, actions) {
-            return actions.order.create({
-                purchase_units: [{
-                    amount: {
-                        value: '0.01'
-                    }
-                }]
-            });
+        style: {
+            color: 'blue',
+            shape: 'rect',
+            label: 'pay',
+            height: 40
         },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Transaction completed by ' + details.payer.name.given_name);
-                // Call your server to save the transaction
-                return fetch('/paypal-transaction-complete', {
-                    method: 'post',
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        orderID: data.orderID
-                    })
-                });
-            });
-        }
+
+
     }).render('#paypal-button-container');
     </script>
 
+    <script src="./JS/storage.js"></script>
     <script src="./JS/index.js"></script>
 </body>
 
