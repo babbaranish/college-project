@@ -19,10 +19,9 @@ function addToCartClicked(event) {
 }
 // ADD TO CART FUNCTION HEHE
 const addItemToCart = (title, price, imageSrc) => {
-  const cartRow = document.createElement("div");
-
   const cartItems = document.getElementsByClassName("cart-items")[0];
   var cartItemNames = cartItems.getElementsByClassName("title-name");
+
   for (var i = 0; i < cartItemNames.length; i++) {
     if (cartItemNames[i].innerText == title) {
       alert("This item is already added to the cart");
@@ -32,17 +31,16 @@ const addItemToCart = (title, price, imageSrc) => {
 
   cartItems.innerHTML += `
     <div class="item">  
-    <img class="img" src="${imageSrc}" alt="">
-      <div class="title-container">
-        <span class="title-name">${title}</span><br>
-        <span class="price">${price}</span>
-      </div>
+      <img class="img" src="${imageSrc}" alt="">
+        <div class="title-container">
+          <span class="title-name">${title}</span><br>
+          <span class="price">${price}</span>
+        </div>
     </div>
   `;
-  cartItems.appendChild(cartRow);
+
   updateCartValue();
   const cartItems1 = document.getElementsByClassName("cart-items")[0];
-  // alert(cartItems1);
   localStorage.setItem("cart", cartItems1.innerHTML);
 };
 
@@ -53,6 +51,6 @@ cartIcon[0].addEventListener("click", function() {
 
 const updateCartValue = () => {
   const cartItem = document.getElementsByClassName("cart-items")[0];
-  const cartValue = Math.floor(cartItem.childElementCount / 2); //dividing by 2 coz flexbox added its div to seperate elements hehe ez
+  const cartValue = cartItem.childElementCount;
   document.querySelector("#cart-value").innerHTML = cartValue;
 };

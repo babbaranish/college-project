@@ -1,0 +1,69 @@
+<div style="width:100%;">
+  <div class="checkout-items">
+    <div class="checkout-image">
+      <img
+        class="img"
+        src="data:image/png;base64,' . base64_encode($data['image']) . '"
+      />
+    </div>
+    <span class="checkout-title">' . $data['product'] . '</span>
+    <span class="quantity">
+      <div class="arrow">
+        ❮
+      </div>
+      <span class="checkout-quantity">1</span>
+      <div class="arrow">❯</div>
+    </span>
+    <span class="checkout-price">$' . $data['price'] . '</span>
+    <div class="cross">
+      ✕
+    </div>
+  </div>
+</div>
+
+<style>
+  .checkout-items {
+    width: 100%;
+    display: flex;
+    min-height: 100px;
+    font-size: 20px;
+    align-items: center;
+    border-bottom: 1px solid darkgrey;
+    padding: 15px 0px;
+  }
+
+  .checkout-image {
+    width: 23%;
+    padding-right: 15px;
+  }
+
+  .checkout-image .img {
+    width: 100%;
+  }
+
+  .checkout-title {
+    width: 23%;
+  }
+
+  .quantity {
+    width: 23%;
+    display: flex;
+  }
+
+  .checkout-quantity {
+    margin: 0 10px;
+  }
+
+  .arrow {
+    cursor: pointer;
+  }
+
+  .checkout-price {
+    width: 23%;
+    margin: auto;
+  }
+
+  .cross {
+    margin: auto;
+  }
+</style>

@@ -35,9 +35,9 @@ if (!isset($_SESSION['admin'])) {
             <li class="links">
                 <?php
                 if (isset($_SESSION['user']) || isset($_SESSION['admin'])) {
-                    echo ' <a href="./Pages/Config/signout.php">SIGN OUT</a>';
+                    echo ' <a href="./Config/signout.php">SIGN OUT</a>';
                 } else {
-                    echo ' <a href="./Pages/signInSignUp.php">SIGN IN</a>';
+                    echo ' <a href="./signInSignUp.php">SIGN IN</a>';
                 }
                 ?>
             </li>
