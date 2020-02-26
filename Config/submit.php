@@ -79,7 +79,7 @@
                     header("refresh:3;url=../admin.php");
             }
         } else {
-            echo "Please select an image file to upload.";
+            echo "Please select an image file to upload. Redirecting to previous page.";
             header("refresh:3;url=../admin.php");
         }
     }

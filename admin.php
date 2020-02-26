@@ -18,22 +18,41 @@ if (!isset($_SESSION['admin'])) {
     <!--NAV-BAR-->
     <?php include_once('navbar.php') ?>
 
-    <center>
+
+    <div class="add-product-container">
         <h1>ADD PRODUCT TO THE SHOP</h1>
-        <form action='./Pages/Config/submit.php' method="post" enctype="multipart/form-data">
-            <label style="margin-right:10px;font-size:20px;margin-left:60px;">IMAGE : </label>
-            <input type="file" name="image" required></input><br><br>
-            <label style="margin-right:10px;font-size:20px;">NAME : </label>
-            <input type="text" name="name" required></input><br><br>
-            <label style="margin-right:10px;font-size:20px;">PRICE : </label>
-            <input type="text" name="price" required></input><br><br>
-            <label style="margin-right:10px;font-size:20px;">CATEGORY : </label>
-            <input type="text" name="category" required></input><br><br>
-            <input
-                style="height: 50px;letter-spacing:0.5px;line-height: 50px;padding: 0 35px 0 35px;font-size: 15px;background-color: black;color: white;font-family: 'Open Sans Condensed';border:none;cursor:pointer"
-                type="submit" name="submit">
+        <form class="add-product-form" action='./Config/submit.php' method="post" enctype="multipart/form-data">
+            <div class="add-input-container">
+                <label class="add-label">IMAGE: </label>
+                <div class="inputs">
+                    <input style="margin:7px 0 0 20px" type="file" name="image" required></input><br><br>
+                </div>
+            </div>
+            <div class="add-input-container">
+                <label class="add-label">NAME: </label>
+                <div class="inputs">
+                    <input class="input" type="text" name="name" required></input><br><br>
+                </div>
+            </div>
+            <div class="add-input-container">
+                <label class="add-label">PRICE: </label>
+                <div class='inputs'>
+
+                    <input class="input" type="text" name="price" required></input><br><br>
+                </div>
+
+            </div>
+            <div class="add-input-container">
+                <label class="add-label">CATEGORY: </label>
+                <div class='inputs'>
+                    <input class="input" type="text" name="category" required></input><br><br>
+                </div>
+
+            </div>
+            <input class="add-button" type="submit" name="submit">
         </form>
-    </center>
+    </div>
+
 
 
     <script src="./JS/storage.js"></script>

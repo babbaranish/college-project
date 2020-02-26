@@ -86,7 +86,6 @@ if (isset($_GET['success'])) {
     <script>
     const pass1 = document.querySelector('#sign-up-password');
     const pass = document.querySelector('#conf-password');
-
     pass.addEventListener('focusout', function() {
         if (pass1.value !== pass.value) {
             alert("PASSWORD NOT SAME")
