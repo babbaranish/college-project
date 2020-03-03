@@ -16,67 +16,21 @@
             $productName = $_REQUEST['name'];
             $price = $_REQUEST['price'];
             $category = strtolower($_REQUEST['category']);
+            $allowedCategories = array(1 => 'mens', 2 => 'womens', 3 => 'sneakers', 4 => 'hats', 5 => 'jackets');
+            if (in_array($category, $allowedCategories)) {
+                $query = "INSERT into $category (product,price,image) VALUES ('$productName','$price','$imgContent')";
+                $insert = mysqli_query($db, $query);
 
-            /*
-            * Insert image data into database
-            */
-            switch ($category) {
-                case "mens":
-                    $insert = mysqli_query($db, "INSERT into mens (product,price,image) VALUES ('$productName','$price','$imgContent')");
-                    if ($insert) {
-                        echo "Product uploaded successfully. REDIRECTING TO ADMIN PAGE";
-                        header("refresh:3;url=../admin.php");
-                    } else {
-                        echo "Product upload failed, please try again. REDIRECTING TO ADMIN PAGE";
-                        header("refresh:3;url=../admin.php");
-                    }
-                    break;
-                case "womens":
-                    //Insert image content into database
-                    $insert = mysqli_query($db, "INSERT into womens (product,price,image) VALUES ('$productName','$price','$imgContent')");
-                    if ($insert) {
-                        echo "Product uploaded successfully. REDIRECTING TO ADMIN PAGE";
-                        header("refresh:3;url=../admin.php");
-                    } else {
-                        echo "Product upload failed, please try again. REDIRECTING TO ADMIN PAGE";
-                        header("refresh:3;url=../admin.php");
-                    }
-                    break;
-                case "hats":
-                    //Insert image content into database
-                    $insert = mysqli_query($db, "INSERT into hats (product,price,image) VALUES ('$productName','$price','$imgContent')");
-                    if ($insert) {
-                        echo "Product uploaded successfully. REDIRECTING TO ADMIN PAGE";
-                        header("refresh:3;url=../admin.php");
-                    } else {
-                        echo "Product upload failed, please try again. REDIRECTING TO ADMIN PAGE";
-                        header("refresh:3;url=../admin.php");
-                    }
-                    break;
-                case "sneakers":
-                    //Insert image content into database
-                    $insert = mysqli_query($db, "INSERT into sneakers (product,price,image) VALUES ('$productName','$price','$imgContent')");
-                    if ($insert) {
-                        echo "Product uploaded successfully.  REDIRECTING TO ADMIN PAGE";
-                        header("refresh:3;url=../admin.php");
-                    } else {
-                        echo "Product upload failed, please try again. REDIRECTING TO ADMIN PAGE";
-                        header("refresh:3;url=../admin.php");
-                    }
-                    break;
-                case "jackets":
-                    //Insert image content into database
-                    $insert = mysqli_query($db, "INSERT into jackets (product,price,image) VALUES ('$productName','$price','$imgContent')");
-                    if ($insert) {
-                        echo "Product uploaded successfully. REDIRECTING TO ADMIN PAGE";
-                        header("refresh:3;url=../admin.php");
-                    } else {
-                        echo "Product upload failed, please try again.  REDIRECTING TO ADMIN PAGE";
-                        header("refresh:3;url=../admin.php");
-                    }
-                default:
-                    echo "ENTER RIGHT CATEGORY HEHE, REDIRECTING TO ADMIN PAGE";
+                if ($insert) {
+                    echo "Product uploaded successfully. REDIRECTING TO ADMIN PAGE";
                     header("refresh:3;url=../admin.php");
+                } else {
+                    echo "Product upload failed, please try again. REDIRECTING TO ADMIN PAGE";
+                    header("refresh:3;url=../admin.php");
+                }
+            } else {
+                echo "ENTER RIGHT CATEGORY HEHE, REDIRECTING TO ADMIN PAGE";
+                header("refresh:3;url=../admin.php");
             }
         } else {
             echo "Please select an image file to upload. Redirecting to previous page.";

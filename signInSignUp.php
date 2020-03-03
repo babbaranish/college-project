@@ -57,7 +57,7 @@ if (isset($_GET['success'])) {
                 echo "";
             }
             ?>
-            <form onsubmit="check()" action="./Config/signUpSubmit.php" method="POST" name="form2">
+            <form action="./Config/signUpSubmit.php" method="POST" name="form2">
                 <div class="input-container">
                     <input id="name" class="input" type="text" name="name" required>
                     <label class="name-label label">Full Name</label>

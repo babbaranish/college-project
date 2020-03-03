@@ -49,8 +49,8 @@ cartIcon[0].addEventListener("click", function() {
   cartDrop[0].classList.toggle("visible");
 });
 
-const updateCartValue = () => {
-  const cartItem = document.getElementsByClassName("cart-items")[0];
-  const cartValue = cartItem.childElementCount;
-  document.querySelector("#cart-value").innerHTML = cartValue;
-};
+// const updateCartValue = () => {
+//   const cartItem = document.getElementsByClassName("cart-items")[0];
+//   const cartValue = cartItem.childElementCount;
+//   document.querySelector("#cart-value").innerHTML = cartValue;
+// };
