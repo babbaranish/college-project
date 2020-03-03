@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['user']) and !isset($_SESSION['admin'])) {
     header('location:./signInSignUp.php');
 }
 ?>

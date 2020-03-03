@@ -17,7 +17,6 @@ session_start();
 
     <!--HOMEPAGE MENU-->
 
-
     <div class="menu-container">
         <a href="./hats.php">
             <div class=" menu-item">
@@ -69,7 +68,6 @@ session_start();
                 </div>
             </div>
         </a>
-
     </div>
     <script src="./JS/index.js"></script>
     <script src="./JS/storage.js">

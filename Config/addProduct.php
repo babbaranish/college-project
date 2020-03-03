@@ -16,7 +16,7 @@
             $productName = $_REQUEST['name'];
             $price = $_REQUEST['price'];
             $category = strtolower($_REQUEST['category']);
-            $allowedCategories = array(1 => 'mens', 2 => 'womens', 3 => 'sneakers', 4 => 'hats', 5 => 'jackets');
+
             /*
             * Insert image data into database
             */
@@ -24,10 +24,10 @@
                 case "mens":
                     $insert = mysqli_query($db, "INSERT into mens (product,price,image) VALUES ('$productName','$price','$imgContent')");
                     if ($insert) {
-                        echo "File uploaded successfully. REDIRECTING TO ADMIN PAGE";
+                        echo "Product uploaded successfully. REDIRECTING TO ADMIN PAGE";
                         header("refresh:3;url=../admin.php");
                     } else {
-                        echo "File upload failed, please try again. REDIRECTING TO ADMIN PAGE";
+                        echo "Product upload failed, please try again. REDIRECTING TO ADMIN PAGE";
                         header("refresh:3;url=../admin.php");
                     }
                     break;
@@ -35,10 +35,10 @@
                     //Insert image content into database
                     $insert = mysqli_query($db, "INSERT into womens (product,price,image) VALUES ('$productName','$price','$imgContent')");
                     if ($insert) {
-                        echo "File uploaded successfully. REDIRECTING TO ADMIN PAGE";
+                        echo "Product uploaded successfully. REDIRECTING TO ADMIN PAGE";
                         header("refresh:3;url=../admin.php");
                     } else {
-                        echo "File upload failed, please try again. REDIRECTING TO ADMIN PAGE";
+                        echo "Product upload failed, please try again. REDIRECTING TO ADMIN PAGE";
                         header("refresh:3;url=../admin.php");
                     }
                     break;
@@ -46,10 +46,10 @@
                     //Insert image content into database
                     $insert = mysqli_query($db, "INSERT into hats (product,price,image) VALUES ('$productName','$price','$imgContent')");
                     if ($insert) {
-                        echo "File uploaded successfully. REDIRECTING TO ADMIN PAGE";
+                        echo "Product uploaded successfully. REDIRECTING TO ADMIN PAGE";
                         header("refresh:3;url=../admin.php");
                     } else {
-                        echo "File upload failed, please try again. REDIRECTING TO ADMIN PAGE";
+                        echo "Product upload failed, please try again. REDIRECTING TO ADMIN PAGE";
                         header("refresh:3;url=../admin.php");
                     }
                     break;
@@ -57,10 +57,10 @@
                     //Insert image content into database
                     $insert = mysqli_query($db, "INSERT into sneakers (product,price,image) VALUES ('$productName','$price','$imgContent')");
                     if ($insert) {
-                        echo "File uploaded successfully.  REDIRECTING TO ADMIN PAGE";
+                        echo "Product uploaded successfully.  REDIRECTING TO ADMIN PAGE";
                         header("refresh:3;url=../admin.php");
                     } else {
-                        echo "File upload failed, please try again. REDIRECTING TO ADMIN PAGE";
+                        echo "Product upload failed, please try again. REDIRECTING TO ADMIN PAGE";
                         header("refresh:3;url=../admin.php");
                     }
                     break;
@@ -68,10 +68,10 @@
                     //Insert image content into database
                     $insert = mysqli_query($db, "INSERT into jackets (product,price,image) VALUES ('$productName','$price','$imgContent')");
                     if ($insert) {
-                        echo "File uploaded successfully. REDIRECTING TO ADMIN PAGE";
+                        echo "Product uploaded successfully. REDIRECTING TO ADMIN PAGE";
                         header("refresh:3;url=../admin.php");
                     } else {
-                        echo "File upload failed, please try again.  REDIRECTING TO ADMIN PAGE";
+                        echo "Product upload failed, please try again.  REDIRECTING TO ADMIN PAGE";
                         header("refresh:3;url=../admin.php");
                     }
                 default:

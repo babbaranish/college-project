@@ -1,59 +1,72 @@
-.add-product-container {
+.form-container {
     display: flex;
-    flex-direction: column;
-    width: 400px;
-    margin: 0 auto;
 
-    h1 {
-        text-align: center;
+    @media all and (max-width: 700px) and (min-width: 200px) {
+        flex-direction: column;
     }
 
-    .add-product-form {
+    .add-product-container {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        width: 400px;
+        margin: 0 auto;
 
-        &:last-child {
-            margin-right: 0;
+        @media all and (max-width: 500px) and (min-width: 200px) {
+            width: 100%;
         }
 
-        .add-input-container {
+        h1 {
+            text-align: center;
+        }
+
+        .add-product-form {
             display: flex;
-            margin-bottom: 20px;
+            flex-direction: column;
+            justify-content: space-between;
 
-            .add-label {
-                margin-right: 10px;
-                font-size: 24px;
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .add-input-container {
+                display: flex;
+                margin-bottom: 20px;
+
+                .add-label {
+                    margin-right: 10px;
+                    font-size: 24px;
+
+                }
+
+                .inputs {
+                    width: 100%;
+
+                }
+
+                .input {
+                    @include formInput();
+                    padding: 0;
+                    margin: 6px 0 0 0;
+                    width: 90%;
+                }
 
             }
 
-            .inputs {
-                width: 100%;
-
+            .add-button {
+                height: 50px;
+                letter-spacing: 0.5px;
+                line-height: 50px;
+                padding: 0 35px 0 35px;
+                font-size: 15px;
+                background-color: black;
+                color: white;
+                font-family: 'Open Sans Condensed';
+                border: none;
+                cursor: pointer;
+                width: 250px;
+                margin: 0 auto;
             }
-
-            .input {
-                @include formInput();
-                padding: 0;
-                margin: 6px 0 0 0;
-                width: 90%;
-            }
-
-        }
-
-        .add-button {
-            height: 50px;
-            letter-spacing: 0.5px;
-            line-height: 50px;
-            padding: 0 35px 0 35px;
-            font-size: 15px;
-            background-color: black;
-            color: white;
-            font-family: 'Open Sans Condensed';
-            border: none;
-            cursor: pointer;
-            width: 250px;
-            margin: 0 auto;
         }
     }
+
 }

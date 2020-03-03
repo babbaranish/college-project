@@ -12,11 +12,17 @@
     }
 
     .links-container {
-        width: 70%;
+        width: 90%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: flex-end;
+
+        @media all and (max-width: 480px) and (min-width: 300px) {
+            padding: 0;
+            font-size: 13px;
+
+        }
 
 
         .links {
