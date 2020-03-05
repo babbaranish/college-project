@@ -26,16 +26,23 @@ $dataFromDB = mysqli_query($db, $query);
         <div class="item-img-container">
             <?php
             while ($data = mysqli_fetch_assoc($dataFromDB)) {
-                echo '
+
+            ?>
+            <form method="post" action="session.php?action=add&id=<?php echo $data["id"]; ?>">
                 <div class="item-container">
-                <img class="img" src="data:image/png;base64,' . base64_encode($data['image']) . '" />
+                    <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
                     <div class="title-container">
-                        <span class="title-name">' . $data['product'] . '</span>
-                        <span class="price">$' . $data['price'] . '</span>
+                        <span name="product-name" class="title-name"><?php echo $data['product'] ?></span>
+                        <span name="pro-price" class="price">$ <?php echo $data['price'] ?></span>
+                        <input type="hidden" name="hidden_name" value="<?php echo $data["product"]; ?>" />
+                        <input type="hidden" name="hidden_price" value="<?php echo $data["price"]; ?>" />
+                        <input type="hidden" name="quantity" value="<?php echo 1 ?>" />
+
                     </div>
-                    <button class="custom-btn">ADD TO CART</button>
+                    <button type="submit" id="addtoCart" name="add_to_cart" class="custom-btn">ADD TO CART</button>
                 </div>
-                ';
+            </form>
+            <?php
             }
             ?>
         </div>

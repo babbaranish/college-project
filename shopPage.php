@@ -31,43 +31,60 @@ $dataFromHats = mysqli_query($db, $queryHats);
     <?php include_once('navbar.php') ?>
 
     <!--MENS SECTION-->
-    <section class="mens-container">
-        <h1 class="shop-title-container">
-            <a href='./mens.php'>MENS</a>
+    <section class="item-container">
+        <h1 class="item-title-container">
+            <a href="./mens.php">MENS</a>
         </h1>
-        <div class="mens-img-container">
+        <div class="item-img-container">
             <?php
             while ($data = mysqli_fetch_assoc($dataFromMens)) {
 
-                echo '<div class="mens-item-container">
-                    <img class="img" src="data:image/png;base64,' . base64_encode($data['image']) . '" />';
-                echo '<div class="title-container">
-                            <span class="title-name">' . $data['product'] . '</span>
-                            <span class="price">$' . $data['price'] . '</span>
-                        </div>
-                        <button class="custom-btn">ADD TO CART</button>
-                    </div>';
+            ?>
+            <form method="post" action="session.php?action=add&id=<?php echo $data["id"]; ?>">
+                <div class="item-container">
+                    <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
+                    <div class="title-container">
+                        <span name="product-name" class="title-name"><?php echo $data['product'] ?></span>
+                        <span name="pro-price" class="price">$ <?php echo $data['price'] ?></span>
+                        <input type="hidden" name="hidden_name" value="<?php echo $data["product"]; ?>" />
+                        <input type="hidden" name="hidden_price" value="<?php echo $data["price"]; ?>" />
+                        <input type="hidden" name="quantity" value="<?php echo 1 ?>" />
+
+                    </div>
+                    <button type="submit" id="addtoCart" name="add_to_cart" class="custom-btn">ADD TO CART</button>
+                </div>
+            </form>
+            <?php
             }
             ?>
         </div>
     </section>
 
     <!--WOMENS SECTION-->
-    <section class="womens-container">
-        <h1 class="shop-title-container">
-            <a href='./womens.php'>WOMENS</a>
+    <section class="item-container">
+        <h1 class="item-title-container">
+            <a href="./womens.php">WOMENS</a>
         </h1>
-        <div class="womens-img-container">
+        <div class="item-img-container">
             <?php
-            while ($data1 = mysqli_fetch_assoc($dataFromWomens)) {
-                echo '<div class="womens-item-container">
-                    <img class="img" src="data:image/png;base64,' . base64_encode($data1['image']) . '" />
+            while ($data = mysqli_fetch_assoc($dataFromWomens)) {
+
+            ?>
+            <form method="post" action="session.php?action=add&id=<?php echo $data["id"]; ?>">
+                <div class="item-container">
+                    <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
                     <div class="title-container">
-                        <span class="title-name">' . $data1['product'] . '</span>
-                        <span class="price">$' . $data1['price'] . '</span>
+                        <span name="product-name" class="title-name"><?php echo $data['product'] ?></span>
+                        <span name="pro-price" class="price">$ <?php echo $data['price'] ?></span>
+                        <input type="hidden" name="hidden_name" value="<?php echo $data["product"]; ?>" />
+                        <input type="hidden" name="hidden_price" value="<?php echo $data["price"]; ?>" />
+                        <input type="hidden" name="quantity" value="<?php echo 1 ?>" />
+
                     </div>
-                    <button class="custom-btn">ADD TO CART</button>
-                </div>';
+                    <button type="submit" id="addtoCart" name="add_to_cart" class="custom-btn">ADD TO CART</button>
+                </div>
+            </form>
+            <?php
             }
             ?>
         </div>
@@ -75,20 +92,29 @@ $dataFromHats = mysqli_query($db, $queryHats);
 
     <!--SNEAKERS SECTION-->
     <section class="item-container">
-        <h1 class="shop-title-container">
-            <a href='./sneakers.php'>SNEAKERS</a>
+        <h1 class="item-title-container">
+            <a href="./sneakers.php">SNEAKERS</a>
         </h1>
         <div class="item-img-container">
             <?php
             while ($data = mysqli_fetch_assoc($dataFromSneakers)) {
-                echo '<div class="item-container">
-                    <img class="img" src="data:image/png;base64,' . base64_encode($data['image']) . '" />
+
+            ?>
+            <form method="post" action="session.php?action=add&id=<?php echo $data["id"]; ?>">
+                <div class="item-container">
+                    <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
                     <div class="title-container">
-                        <span class="title-name">' . $data['product'] . '</span>
-                        <span class="price">$' . $data['price'] . '</span>
+                        <span name="product-name" class="title-name"><?php echo $data['product'] ?></span>
+                        <span name="pro-price" class="price">$ <?php echo $data['price'] ?></span>
+                        <input type="hidden" name="hidden_name" value="<?php echo $data["product"]; ?>" />
+                        <input type="hidden" name="hidden_price" value="<?php echo $data["price"]; ?>" />
+                        <input type="hidden" name="quantity" value="<?php echo 1 ?>" />
+
                     </div>
-                    <button class="custom-btn">ADD TO CART</button>
-                </div>';
+                    <button type="submit" id="addtoCart" name="add_to_cart" class="custom-btn">ADD TO CART</button>
+                </div>
+            </form>
+            <?php
             }
             ?>
         </div>
@@ -96,20 +122,29 @@ $dataFromHats = mysqli_query($db, $queryHats);
 
     <!--JACKETS SECTION-->
     <section class="item-container">
-        <h1 class="shop-title-container">
-            <a href='./jackets.php'>JACKETS</a>
+        <h1 class="item-title-container">
+            <a href="./jackets.php">JACKETS</a>
         </h1>
         <div class="item-img-container">
             <?php
             while ($data = mysqli_fetch_assoc($dataFromJackets)) {
-                echo '<div class="item-container">
-                    <img class="img" src="data:image/png;base64,' . base64_encode($data['image']) . '" />
+
+            ?>
+            <form method="post" action="session.php?action=add&id=<?php echo $data["id"]; ?>">
+                <div class="item-container">
+                    <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
                     <div class="title-container">
-                        <span class="title-name">' . $data['product'] . '</span>
-                        <span class="price">$' . $data['price'] . '</span>
+                        <span name="product-name" class="title-name"><?php echo $data['product'] ?></span>
+                        <span name="pro-price" class="price">$ <?php echo $data['price'] ?></span>
+                        <input type="hidden" name="hidden_name" value="<?php echo $data["product"]; ?>" />
+                        <input type="hidden" name="hidden_price" value="<?php echo $data["price"]; ?>" />
+                        <input type="hidden" name="quantity" value="<?php echo 1 ?>" />
+
                     </div>
-                    <button class="custom-btn">ADD TO CART</button>
-                </div>';
+                    <button type="submit" id="addtoCart" name="add_to_cart" class="custom-btn">ADD TO CART</button>
+                </div>
+            </form>
+            <?php
             }
             ?>
         </div>
@@ -117,20 +152,29 @@ $dataFromHats = mysqli_query($db, $queryHats);
 
     <!--HATS SECTION-->
     <section class="item-container">
-        <h1 class="shop-title-container">
-            <a href='./hats.php'>HATS</a>
+        <h1 class="item-title-container">
+            <a href="./hats.php">HATS</a>
         </h1>
         <div class="item-img-container">
             <?php
             while ($data = mysqli_fetch_assoc($dataFromHats)) {
-                echo '<div class="item-container">
-                    <img class="img" src="data:image/png;base64,' . base64_encode($data['image']) . '" />
+
+            ?>
+            <form method="post" action="session.php?action=add&id=<?php echo $data["id"]; ?>">
+                <div class="item-container">
+                    <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
                     <div class="title-container">
-                        <span class="title-name">' . $data['product'] . '</span>
-                        <span class="price">$' . $data['price'] . '</span>
+                        <span name="product-name" class="title-name"><?php echo $data['product'] ?></span>
+                        <span name="pro-price" class="price">$ <?php echo $data['price'] ?></span>
+                        <input type="hidden" name="hidden_name" value="<?php echo $data["product"]; ?>" />
+                        <input type="hidden" name="hidden_price" value="<?php echo $data["price"]; ?>" />
+                        <input type="hidden" name="quantity" value="<?php echo 1 ?>" />
+
                     </div>
-                    <button class="custom-btn">ADD TO CART</button>
-                </div>';
+                    <button type="submit" id="addtoCart" name="add_to_cart" class="custom-btn">ADD TO CART</button>
+                </div>
+            </form>
+            <?php
             }
             ?>
         </div>

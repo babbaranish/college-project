@@ -23,15 +23,24 @@
             }
             ?>
         </li>
-        <li class="cart-icon-container">
-            <img class="cart-icon" src="./assets/cart.svg" alt="cart icon" />
-            <span style="position: absolute;font-size: 10px;font-weight: bold;bottom: 7px;left: 10px;">0</span>
-        </li>
-    </ul>
-    <div class="cart-dropdown">
-        <div class="cart-items"></div>
         <a href='./checkout.php'>
-            <button class="cart-button">GO TO CHECKOUT</button>
+            <li class="cart-icon-container">
+                <img class="cart-icon" src="./assets/cart.svg" alt="cart icon" />
+                <span style="position: absolute;font-size: 10px;font-weight: bold;bottom: 7px;left: 10px;">
+                    <?php
+                    if (!empty($_SESSION["shopping_cart"])) {
+                        $total = 0;
+                        foreach ($_SESSION["shopping_cart"] as $keys => $values) {
+                            $total +=  1;
+                        }
+                        echo $total;
+                    } else {
+                        echo 0;
+                    }
+                    ?>
+                </span>
+            </li>
         </a>
-    </div>
+    </ul>
+
 </nav>
