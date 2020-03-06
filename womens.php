@@ -28,7 +28,7 @@ $dataFromDB = mysqli_query($db, $query);
             while ($data = mysqli_fetch_assoc($dataFromDB)) {
 
             ?>
-            <form method="post" action="session.php?action=add&id=<?php echo $data["id"]; ?>">
+            <form method="post" action="session.php?id=<?php echo $data["id"]; ?>">
                 <div class="womens-item-container">
                     <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
                     <div class="title-container">

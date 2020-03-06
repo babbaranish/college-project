@@ -40,7 +40,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
             while ($data = mysqli_fetch_assoc($dataFromMens)) {
 
             ?>
-            <form method="post" action="session.php?action=add&id=<?php echo $data["id"]; ?>">
+            <form method="post" action="session.php?id=<?php echo $data["id"]; ?>">
                 <div class="item-container">
                     <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
                     <div class="title-container">
@@ -70,7 +70,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
             while ($data = mysqli_fetch_assoc($dataFromWomens)) {
 
             ?>
-            <form method="post" action="session.php?action=add&id=<?php echo $data["id"]; ?>">
+            <form method="post" action="session.php?id=<?php echo $data["id"]; ?>">
                 <div class="item-container">
                     <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
                     <div class="title-container">
@@ -100,7 +100,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
             while ($data = mysqli_fetch_assoc($dataFromSneakers)) {
 
             ?>
-            <form method="post" action="session.php?action=add&id=<?php echo $data["id"]; ?>">
+            <form method="post" action="session.php?id=<?php echo $data["id"]; ?>">
                 <div class="item-container">
                     <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
                     <div class="title-container">
@@ -130,7 +130,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
             while ($data = mysqli_fetch_assoc($dataFromJackets)) {
 
             ?>
-            <form method="post" action="session.php?action=add&id=<?php echo $data["id"]; ?>">
+            <form method="post" action="session.php?id=<?php echo $data["id"]; ?>">
                 <div class="item-container">
                     <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
                     <div class="title-container">
@@ -160,7 +160,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
             while ($data = mysqli_fetch_assoc($dataFromHats)) {
 
             ?>
-            <form method="post" action="session.php?action=add&id=<?php echo $data["id"]; ?>">
+            <form method="post" action="session.php?id=<?php echo $data["id"]; ?>">
                 <div class="item-container">
                     <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
                     <div class="title-container">
