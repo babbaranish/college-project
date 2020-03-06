@@ -1,11 +1,11 @@
 <?php session_start();
 
 $connect = mysqli_connect("localhost", "root", "", "shop");
-
+//check if add_to_cart is pressed
 if (isset($_POST["add_to_cart"])) {
-	if (isset($_SESSION["shopping_cart"])) {
-		$item_array_id = array_column($_SESSION["shopping_cart"], "item_id");
-		if (!in_array($_GET["id"], $item_array_id)) {
+	if (isset($_SESSION["shopping_cart"])) {  // if session is set to shoppingcart then this will run
+		$item_array_id = array_column($_SESSION["shopping_cart"], "item_id"); //Return the values from a single column in the input array
+		if (!in_array($_GET["id"], $item_array_id)) {   // if get id is already in or not if not in then this will run and set the values to the shopping_cart session
 			$count = count($_SESSION["shopping_cart"]);
 			$item_array = array(
 				'item_id'		=>	$_GET["id"],
@@ -19,10 +19,10 @@ if (isset($_POST["add_to_cart"])) {
 			header('Location: ' . $_SERVER['HTTP_REFERER']);
 		} else {
 			//ALREADY ADDED
-			echo '<script> alert("ALREADY ADDED")</script>';
+			// echo '<script> alert("ALREADY ADDED")</script>';
 			header('Location: ' . $_SERVER['HTTP_REFERER']);
 		}
-	} else {
+	} else {  // if not in session then this will run and add all the values to the session
 		$item_array = array(
 			'item_id'		=>	$_GET["id"],
 			'item_name'		=>	$_POST["hidden_name"],
@@ -35,11 +35,11 @@ if (isset($_POST["add_to_cart"])) {
 		echo '<script> console.log($item_array)';
 	}
 }
-
+// if action=delete then this will run and delete the product from session
 if (isset($_GET["action"])) {
 	if ($_GET["action"] == "delete") {
 		foreach ($_SESSION["shopping_cart"] as $keys => $values) {
-			if ($values["item_id"] == $_GET["id"]) {
+			if ($values["item_id"] == $_GET["id"]) { // check the id of product and unset that product ez
 				unset($_SESSION["shopping_cart"][$keys]);
 				echo '<script>alert("Item Removed")</script>';
 				header('Location: ' . $_SERVER['HTTP_REFERER']);
