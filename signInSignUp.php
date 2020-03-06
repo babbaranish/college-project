@@ -92,7 +92,6 @@ if (isset($_GET['success'])) {
         }
     });
     </script>
-    <script src="./JS/storage.js"></script>
 
 </body>
 

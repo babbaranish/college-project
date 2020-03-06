@@ -45,7 +45,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
                     <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
                     <div class="title-container">
                         <span name="product-name" class="title-name"><?php echo $data['product'] ?></span>
-                        <span name="pro-price" class="price">$ <?php echo $data['price'] ?></span>
+                        <span name="pro-price" class="price">$<?php echo $data['price'] ?></span>
                         <input type="hidden" name="hidden_name" value="<?php echo $data["product"]; ?>" />
                         <input type="hidden" name="hidden_price" value="<?php echo $data["price"]; ?>" />
                         <input type="hidden" name="quantity" value="<?php echo 1 ?>" />
@@ -75,7 +75,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
                     <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
                     <div class="title-container">
                         <span name="product-name" class="title-name"><?php echo $data['product'] ?></span>
-                        <span name="pro-price" class="price">$ <?php echo $data['price'] ?></span>
+                        <span name="pro-price" class="price">$<?php echo $data['price'] ?></span>
                         <input type="hidden" name="hidden_name" value="<?php echo $data["product"]; ?>" />
                         <input type="hidden" name="hidden_price" value="<?php echo $data["price"]; ?>" />
                         <input type="hidden" name="quantity" value="<?php echo 1 ?>" />
@@ -105,7 +105,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
                     <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
                     <div class="title-container">
                         <span name="product-name" class="title-name"><?php echo $data['product'] ?></span>
-                        <span name="pro-price" class="price">$ <?php echo $data['price'] ?></span>
+                        <span name="pro-price" class="price">$<?php echo $data['price'] ?></span>
                         <input type="hidden" name="hidden_name" value="<?php echo $data["product"]; ?>" />
                         <input type="hidden" name="hidden_price" value="<?php echo $data["price"]; ?>" />
                         <input type="hidden" name="quantity" value="<?php echo 1 ?>" />
@@ -135,7 +135,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
                     <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
                     <div class="title-container">
                         <span name="product-name" class="title-name"><?php echo $data['product'] ?></span>
-                        <span name="pro-price" class="price">$ <?php echo $data['price'] ?></span>
+                        <span name="pro-price" class="price">$<?php echo $data['price'] ?></span>
                         <input type="hidden" name="hidden_name" value="<?php echo $data["product"]; ?>" />
                         <input type="hidden" name="hidden_price" value="<?php echo $data["price"]; ?>" />
                         <input type="hidden" name="quantity" value="<?php echo 1 ?>" />
@@ -165,7 +165,7 @@ $dataFromHats = mysqli_query($db, $queryHats);
                     <?php echo '<img class="img" name="item_image" src="data:image/png;base64,' . base64_encode($data['image']) . '" />'; ?>
                     <div class="title-container">
                         <span name="product-name" class="title-name"><?php echo $data['product'] ?></span>
-                        <span name="pro-price" class="price">$ <?php echo $data['price'] ?></span>
+                        <span name="pro-price" class="price">$<?php echo $data['price'] ?></span>
                         <input type="hidden" name="hidden_name" value="<?php echo $data["product"]; ?>" />
                         <input type="hidden" name="hidden_price" value="<?php echo $data["price"]; ?>" />
                         <input type="hidden" name="quantity" value="<?php echo 1 ?>" />
@@ -179,7 +179,6 @@ $dataFromHats = mysqli_query($db, $queryHats);
             ?>
         </div>
     </section>
-    <script src="./JS/storage.js"></script>
     <script src="./JS/index.js"></script>
 </body>
 

@@ -75,7 +75,6 @@ if (!isset($_SESSION['admin'])) {
         </div>
     </div>
     <script src="./JS/index.js"></script>
-    <script src="./JS/storage.js"></script>
 </body>
 
 </html>
