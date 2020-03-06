@@ -22,9 +22,8 @@ if (!isset($_SESSION['user']) and !isset($_SESSION['admin'])) {
 </head>
 
 <body>
-
+    <!-- Checkout Form popup -->
     <div class="popup-container">
-
         <div class="form-container">
             <form method="post" action="./Config/order.php">
                 <div class="input-container">
@@ -32,16 +31,23 @@ if (!isset($_SESSION['user']) and !isset($_SESSION['admin'])) {
                     <input type="text" name='name'>
                 </div>
                 <div class="input-container">
-                    &nbsp;<label for="name">Address</label>
-                    <input type="text" name='name'>
+                    <label for="mobile">Mobile</label>
+                    <input type="text" name='mobile' maxlength="10">
                 </div>
                 <div class="input-container">
-                    <label for="name">Mobile</label>
-                    <input type="text" name='name'>
+                    <label for="city">City</label>&nbsp;&nbsp;
+                    <input type="text" name='city'>
                 </div>
                 <div class="input-container">
-                    &nbsp;<label for="name">Pincode</label>
-                    <input type="text" name='name'>
+                    <label for="pincode">Pincode</label>
+                    <input type="text" name='pincode' maxlength="6">
+                </div>
+                <div class="input-container">
+                    <label for="address">Address</label>
+                    <textarea type="text" name='address' rows="3"></textarea>
+                </div>
+                <div class="input-container">
+                    <button class="checkout-submit" type="submit" name='submit'>PLACE ORDER</button>
                 </div>
             </form>
             <span onclick='remove()' style="font-size:25px; cursor:pointer">&#10005;</span>

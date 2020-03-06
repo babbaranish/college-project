@@ -1439,6 +1439,51 @@
   outline: none;
 }
 
+.popup-container .form-container form .input-container textarea {
+  background: none;
+  background-color: white;
+  color: grey;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid grey;
+  margin: 25px 0;
+}
+
+.popup-container .form-container form .input-container textarea:focus {
+  outline: none;
+}
+
+.popup-container .form-container form .input-container .checkout-submit {
+  min-width: 165px;
+  width: auto;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed';
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-container .form-container form .input-container .checkout-submit:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.popup-container .form-container form .input-container .checkout-submit:active {
+  outline: none;
+}
+
 body {
   font-family: "Open Sans Condensed" !important;
   padding: 20px 40px;

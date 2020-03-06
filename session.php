@@ -18,7 +18,8 @@ if (isset($_POST["add_to_cart"])) {
 			echo '<script> console.log($item_array)';
 			header('Location: ' . $_SERVER['HTTP_REFERER']);
 		} else {
-			echo '<script>alert("Item Already Added")</script>';
+			//ALREADY ADDED
+			echo '<script> alert("ALREADY ADDED")</script>';
 			header('Location: ' . $_SERVER['HTTP_REFERER']);
 		}
 	} else {

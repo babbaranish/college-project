@@ -20,12 +20,12 @@ if (isset($_POST['submit'])) {
                 header("refresh:3;url=../signInSignUp.php");
             }
         } else {
-            $query = "INSERT INTO users (name,email,password,confPassword) VALUES ('$name','$email','$hashedPassword','$$hashedConPassword')";
+            $query = "INSERT INTO users (name,email,password,confPassword) VALUES ('$name','$email','$hashedPassword','$hashedConPassword')";
             if (mysqli_query($db, $query)) {
                 header("Location: ../signInSignUp.php?success=1");
             } else {
                 echo 'ERROR IN SIGN UP PROCESS. REDIRECTING TO SIGN UP PAGE';
-                // header("refresh:3;url=../signInSignUp.php");
+                header("refresh:3;url=../signInSignUp.php");
             }
         }
     }

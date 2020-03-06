@@ -18,9 +18,10 @@ if (isset($_POST['submit1'])) {
         if (password_verify($password, $userData['password'])) {
             $_SESSION['user'] = $userData['email'];
             header('location:../index.php');
+        } else {
+            header('location:../signInSignUp.php?error=1');
         }
     } else {
         header('location:../signInSignUp.php?error=1');
-        echo $userData['password'];
     }
 }

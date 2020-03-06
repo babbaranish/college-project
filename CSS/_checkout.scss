@@ -141,6 +141,14 @@
                 input {
                     @include formInput();
                 }
+
+                textarea {
+                    @include formInput();
+                }
+
+                .checkout-submit {
+                    @include CustomButton1;
+                }
             }
         }
     }
