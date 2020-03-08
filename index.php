@@ -8,7 +8,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/styles.css" />
     <link rel="icon" href="./assets/icon.ico">
-    <title>Project Shop</title>
+    <title>E-MART</title>
 </head>
 
 <body>
