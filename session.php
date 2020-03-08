@@ -18,8 +18,14 @@ if (isset($_POST["add_to_cart"])) {
 			echo '<script> console.log($item_array)';
 			header('Location: ' . $_SERVER['HTTP_REFERER']);
 		} else {
-			//ALREADY ADDED
-			// echo '<script> alert("ALREADY ADDED")</script>';
+			$count = count($_SESSION["shopping_cart"]);
+			for ($i = 0; $i < $count; $i++) {
+				if ($_SESSION["shopping_cart"][$i]['item_id'] == $_GET["id"]) {
+					$_SESSION["shopping_cart"][$i]['item_quantity'] += 1;
+					$_SESSION["shopping_cart"][$i]['item_price'] = $_SESSION["shopping_cart"][$i]['item_price'] * $_SESSION["shopping_cart"][$i]['item_quantity'];
+				}
+			}
+
 			header('Location: ' . $_SERVER['HTTP_REFERER']);
 		}
 	} else {  // if not in session then this will run and add all the values to the session
