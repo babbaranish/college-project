@@ -1234,10 +1234,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: white;
-  opacity: .9;
-  position: fixed;
-  display: none;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }

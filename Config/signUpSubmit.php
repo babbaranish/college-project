@@ -17,8 +17,7 @@ if (isset($_POST['submit'])) {
     } else {  // check if the email is already saved in DB if saved then echo already exist and redirects the page to signinsignup 
         if ($EmailData) {
             if ($EmailData['email'] == $email) {
-                echo 'EMAIL ALREADY EXIST USE ANOTHER EMAIL. REDIRECTING TO SIGN UP PAGE';
-                header("refresh:3;url=../signInSignUp.php");
+                header("location:../signInSignUp.php?email=0");
             }
         } else {  // if email doesn't exist then create new user in DB
             $query = "INSERT INTO users (name,email,password,confPassword) VALUES ('$name','$email','$hashedPassword','$hashedConPassword')";

@@ -15,7 +15,6 @@ if (isset($_POST["add_to_cart"])) {
 				'item_quantity'		=>	$_POST["quantity"]
 			);
 			$_SESSION["shopping_cart"][$count] = $item_array;
-			echo '<script> console.log($item_array)';
 			header('Location: ' . $_SERVER['HTTP_REFERER']);
 		} else {
 			$count = count($_SESSION["shopping_cart"]);
@@ -38,7 +37,6 @@ if (isset($_POST["add_to_cart"])) {
 		);
 		$_SESSION["shopping_cart"][0] = $item_array;
 		header('Location: ' . $_SERVER['HTTP_REFERER']);
-		echo '<script> console.log($item_array)';
 	}
 }
 // if action=delete then this will run and delete the product from session
@@ -47,7 +45,6 @@ if (isset($_GET["action"])) {
 		foreach ($_SESSION["shopping_cart"] as $keys => $values) {
 			if ($values["item_id"] == $_GET["id"]) { // check the id of product and unset that product ez
 				unset($_SESSION["shopping_cart"][$keys]);
-				echo '<script>alert("Item Removed")</script>';
 				header('Location: ' . $_SERVER['HTTP_REFERER']);
 			}
 		}

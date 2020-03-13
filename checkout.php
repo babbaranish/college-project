@@ -22,39 +22,12 @@ if (!isset($_SESSION['user']) and !isset($_SESSION['admin'])) {
 </head>
 
 <body>
-    <!-- Checkout Form popup -->
-    <div class="popup-container">
-        <div class="form-container">
-            <form method="post" action="./Config/order.php">
-                <div class="input-container">
-                    <label for="name">Name</label>
-                    <input type="text" name='name'>
-                </div>
-                <div class="input-container">
-                    <label for="mobile">Mobile</label>
-                    <input type="text" name='mobile' maxlength="10">
-                </div>
-                <div class="input-container">
-                    <label for="city">City</label>&nbsp;&nbsp;
-                    <input type="text" name='city'>
-                </div>
-                <div class="input-container">
-                    <label for="pincode">Pincode</label>
-                    <input type="text" name='pincode' maxlength="6">
-                </div>
-                <div class="input-container">
-                    <label for="address">Address</label>
-                    <textarea type="text" name='address' rows="3"></textarea>
-                </div>
-                <div class="input-container">
-                    <button class="checkout-submit" type="submit" name='submit'>PLACE ORDER</button>
-                </div>
-            </form>
-            <span onclick='remove()' style="font-size:25px; cursor:pointer">&#10005;</span>
-
-        </div>
-
-    </div>
+    <?php
+    if (isset($_GET['success'])) {
+        echo "<script> alert('Order Placed Successfully');
+        window.location.href='./checkout.php';</script>";
+    }
+    ?>
     <!--NAV-BAR-->
     <?php include_once('navbar.php') ?>
 
@@ -158,9 +131,11 @@ if (!isset($_SESSION['user']) and !isset($_SESSION['admin'])) {
             } //end if 
                 ?></span>
             <div class="cod">
-                <button onclick="hello()" class="cod-btn">
-                    PAY ON DELIVERY
-                </button>
+                <a href="checkoutAddress.php">
+                    <button onclick="hello()" class="cod-btn">
+                        PAY ON DELIVERY
+                    </button>
+                </a>
             </div>
             <div id="paypal-button-container"></div>
         </div>

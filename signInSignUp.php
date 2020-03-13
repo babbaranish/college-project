@@ -53,8 +53,10 @@ if (isset($_GET['success'])) {
             <?php
             if (isset($_GET['error1'])) {
                 echo '<span style="color:red;margin-bottom:-30px;font-weight:bold;">PASSWORD NOT MATCHED</span>';
+            } else if (isset($_GET['email'])) {
+                echo '<span style="color:red;margin-bottom:-30px;font-weight:bold;">EMAIL ALREADY EXIST</span>';
             } else {
-                echo "";
+                echo '';
             }
             ?>
             <form action="./Config/signUpSubmit.php" method="POST" name="form2">
@@ -63,11 +65,12 @@ if (isset($_GET['success'])) {
                     <label class="name-label label">Full Name</label>
                 </div>
                 <div class="input-container">
-                    <input id="sign-up-email" class="input" type="email" name="email" required>
+                    <input id="sign-up-email" class="input" type="email" title="Enter Email in correct format"
+                        name="email">
                     <label class="sign-up-email-label label">E-mail</label>
                 </div>
                 <div class="input-container">
-                    <input id="sign-up-password" class="input" type="password" name="pwd" required>
+                    <input id="sign-up-password" class="input" minlength="8" type="password" name="pwd" required>
                     <label class="sign-up-password-label label">Password</label>
                 </div>
                 <div class="input-container">
