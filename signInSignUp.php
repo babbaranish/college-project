@@ -1,7 +1,7 @@
 <?php
 session_start();
-if (isset($_SESSION['user'])) {
-    header('location: ../index.php');
+if (isset($_SESSION['user']) or isset($_SESSION['admin'])) {
+    header('location: ./index.php');
 }
 if (isset($_GET['success'])) {
     echo "<script> alert('SUCCESSFULLY SIGN UP ');</script>";

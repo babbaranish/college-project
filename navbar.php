@@ -26,24 +26,31 @@
             }
             ?>
         </li>
-        <a href='./checkout.php'>
-            <li class="cart-icon-container">
-                <img class="cart-icon" src="./assets/cart.svg" alt="cart icon" />
-                <span style="position: absolute;font-size: 10px;font-weight: bold;bottom: 7px;left: 10px;">
-                    <?php
-                    //count the items available in shopping_cart and echo the total numbers of item
-                    if (!empty($_SESSION["shopping_cart"])) {
-                        $total = 0;
-                        foreach ($_SESSION["shopping_cart"] as $keys => $values) {
-                            $total +=  1;
-                        }
-                        echo $total;
-                    } else {
-                        echo 0;
-                    }
-                    ?>
-                </span>
-            </li>
+        <?php
+        if (isset($_SESSION['admin'])) {
+            echo '';
+        } else {
+            echo '<a href="./checkout.php">
+                <li class="cart-icon-container">
+                    <img class="cart-icon" src="./assets/cart.svg" alt="cart icon" />
+                    <span style="position: absolute;font-size: 10px;font-weight: bold;bottom: 7px;left: 10px;">';
+            //count the items available in shopping_cart and echo the total numbers of item
+            if (!empty($_SESSION["shopping_cart"])) {
+                $total = 0;
+                foreach ($_SESSION["shopping_cart"] as $keys => $values) {
+                    $total +=  1;
+                }
+                echo $total;
+            } else {
+                echo 0;
+            }
+            echo '</span>';
+        }
+        ?>
+
+
+
+        </li>
         </a>
     </ul>
 </nav>

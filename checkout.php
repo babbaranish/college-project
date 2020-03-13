@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('Config/db.php');
-if (!isset($_SESSION['user']) and !isset($_SESSION['admin'])) {
+if (!isset($_SESSION['user'])) {
     header('location:./signInSignUp.php');
 }
 
