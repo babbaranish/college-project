@@ -20,8 +20,9 @@ if (isset($_POST["add_to_cart"])) {
 			$count = count($_SESSION["shopping_cart"]);
 			for ($i = 0; $i < $count; $i++) {
 				if ($_SESSION["shopping_cart"][$i]['item_id'] == $_GET["id"]) {
+					// Fixed: Only increment quantity, don't modify the unit price
+					// The total price should be calculated when displaying, not stored
 					$_SESSION["shopping_cart"][$i]['item_quantity'] += 1;
-					$_SESSION["shopping_cart"][$i]['item_price'] = $_SESSION["shopping_cart"][$i]['item_price'] * $_SESSION["shopping_cart"][$i]['item_quantity'];
 				}
 			}
 
